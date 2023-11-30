@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		261C3A462B18C0E900CFA902 /* NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 261C3A422B18950500CFA902 /* NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf */; };
+		261C3A4F2B18E4DE00CFA902 /* IntroCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261C3A4D2B18E4DE00CFA902 /* IntroCollectionViewCell.swift */; };
+		261C3A502B18E4DE00CFA902 /* IntroCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 261C3A4E2B18E4DE00CFA902 /* IntroCollectionViewCell.xib */; };
+		261C3A522B18E50300CFA902 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261C3A512B18E50300CFA902 /* Constant.swift */; };
 		2648A6852B187CD300347505 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2648A6842B187CD300347505 /* AppDelegate.swift */; };
 		2648A6872B187CD300347505 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2648A6862B187CD300347505 /* SceneDelegate.swift */; };
 		2648A68E2B187CD400347505 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2648A68D2B187CD400347505 /* Assets.xcassets */; };
@@ -15,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		261C3A422B18950500CFA902 /* NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf"; path = "HealthApp/Resources/Font/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf"; sourceTree = SOURCE_ROOT; };
+		261C3A4D2B18E4DE00CFA902 /* IntroCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroCollectionViewCell.swift; sourceTree = "<group>"; };
+		261C3A4E2B18E4DE00CFA902 /* IntroCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntroCollectionViewCell.xib; sourceTree = "<group>"; };
+		261C3A512B18E50300CFA902 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		2648A6812B187CD300347505 /* HealthApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2648A6842B187CD300347505 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2648A6862B187CD300347505 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				2648A6A02B1881F200347505 /* IntroViewController.xib */,
+				261C3A4D2B18E4DE00CFA902 /* IntroCollectionViewCell.swift */,
+				261C3A4E2B18E4DE00CFA902 /* IntroCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -108,6 +118,7 @@
 		2648A69D2B18815C00347505 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2648A6A32B188DE500347505 /* Font */,
 				2648A68D2B187CD400347505 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -116,8 +127,17 @@
 		2648A69E2B18816E00347505 /* U */ = {
 			isa = PBXGroup;
 			children = (
+				261C3A512B18E50300CFA902 /* Constant.swift */,
 			);
 			path = U;
+			sourceTree = "<group>";
+		};
+		2648A6A32B188DE500347505 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				261C3A422B18950500CFA902 /* NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,8 +198,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				261C3A462B18C0E900CFA902 /* NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf in Resources */,
 				2648A68E2B187CD400347505 /* Assets.xcassets in Resources */,
 				2648A6A22B1881F200347505 /* IntroViewController.xib in Resources */,
+				261C3A502B18E4DE00CFA902 /* IntroCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,7 +214,9 @@
 			files = (
 				2648A6A12B1881F200347505 /* IntroViewController.swift in Sources */,
 				2648A6852B187CD300347505 /* AppDelegate.swift in Sources */,
+				261C3A522B18E50300CFA902 /* Constant.swift in Sources */,
 				2648A6872B187CD300347505 /* SceneDelegate.swift in Sources */,
+				261C3A4F2B18E4DE00CFA902 /* IntroCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +352,7 @@
 				DEVELOPMENT_TEAM = 9G9YD8GX8D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HealthApp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "\"\"";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -355,6 +380,7 @@
 				DEVELOPMENT_TEAM = 9G9YD8GX8D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HealthApp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "\"\"";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
