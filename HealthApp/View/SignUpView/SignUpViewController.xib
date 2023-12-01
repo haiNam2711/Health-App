@@ -45,6 +45,9 @@
                             <integer key="value" value="24"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="goToOtpTapped:" destination="-1" eventType="touchUpInside" id="rSo-Ic-mBk"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udr-ZL-BG6">
                     <rect key="frame" x="25" y="754" width="343" height="48"/>

@@ -55,6 +55,9 @@
                                     <integer key="value" value="24"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="logInButtonTapped:" destination="-1" eventType="touchUpInside" id="GpV-bi-cwt"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBr-T3-ASc" userLabel="Sign Up">
                             <rect key="frame" x="190.33333333333337" y="16" width="186.66666666666663" height="48"/>

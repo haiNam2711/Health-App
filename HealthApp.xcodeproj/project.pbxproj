@@ -16,6 +16,8 @@
 		263296912B19CCF70097758E /* GetFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263296902B19CCF70097758E /* GetFont.swift */; };
 		263296972B19DB400097758E /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263296962B19DB400097758E /* CustomButton.swift */; };
 		2632969B2B19E48F0097758E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2632969A2B19E48F0097758E /* String+Extension.swift */; };
+		263296A12B19EEA20097758E /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2632969F2B19EEA20097758E /* OTPViewController.swift */; };
+		263296A22B19EEA20097758E /* OTPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 263296A02B19EEA20097758E /* OTPViewController.xib */; };
 		2648A6852B187CD300347505 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2648A6842B187CD300347505 /* AppDelegate.swift */; };
 		2648A6872B187CD300347505 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2648A6862B187CD300347505 /* SceneDelegate.swift */; };
 		2648A68E2B187CD400347505 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2648A68D2B187CD400347505 /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 		263296902B19CCF70097758E /* GetFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFont.swift; sourceTree = "<group>"; };
 		263296962B19DB400097758E /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		2632969A2B19E48F0097758E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		2632969F2B19EEA20097758E /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
+		263296A02B19EEA20097758E /* OTPViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPViewController.xib; sourceTree = "<group>"; };
 		2648A6812B187CD300347505 /* HealthApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2648A6842B187CD300347505 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2648A6862B187CD300347505 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +74,14 @@
 				263296962B19DB400097758E /* CustomButton.swift */,
 			);
 			path = SignUpView;
+			sourceTree = "<group>";
+		};
+		263296A32B19EEAA0097758E /* OTPView */ = {
+			isa = PBXGroup;
+			children = (
+				263296A02B19EEA20097758E /* OTPViewController.xib */,
+			);
+			path = OTPView;
 			sourceTree = "<group>";
 		};
 		2648A6782B187CD300347505 = {
@@ -124,6 +136,7 @@
 			children = (
 				261C3A532B18FF1200CFA902 /* IntroView */,
 				261C3A582B18FF4500CFA902 /* SignUpView */,
+				263296A32B19EEAA0097758E /* OTPView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -133,6 +146,7 @@
 			children = (
 				2648A69F2B1881F200347505 /* IntroViewController.swift */,
 				261C3A542B18FF3D00CFA902 /* SignUpViewController.swift */,
+				2632969F2B19EEA20097758E /* OTPViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -229,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				263296A22B19EEA20097758E /* OTPViewController.xib in Resources */,
 				261C3A572B18FF3D00CFA902 /* SignUpViewController.xib in Resources */,
 				261C3A462B18C0E900CFA902 /* NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf in Resources */,
 				2648A68E2B187CD400347505 /* Assets.xcassets in Resources */,
@@ -244,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				263296A12B19EEA20097758E /* OTPViewController.swift in Sources */,
 				261C3A562B18FF3D00CFA902 /* SignUpViewController.swift in Sources */,
 				2632969B2B19E48F0097758E /* String+Extension.swift in Sources */,
 				2648A6A12B1881F200347505 /* IntroViewController.swift in Sources */,
