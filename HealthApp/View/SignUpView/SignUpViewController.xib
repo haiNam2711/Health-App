@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpViewController" customModule="HealthApp" customModuleProvider="target">
+            <connections>
+                <outlet property="goButton" destination="yGg-Xb-EAa" id="QFC-aD-hZz"/>
+                <outlet property="phoneView" destination="bjf-l0-jIQ" id="kJD-p4-5jh"/>
+                <outlet property="textfield" destination="eMj-TU-YdC" id="5h5-xQ-QQ8"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-bgSignUp" translatesAutoresizingMaskIntoConstraints="NO" id="dAu-Dk-s4s">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="197"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="dAu-Dk-s4s" secondAttribute="height" multiplier="375:188" id="9eZ-36-kbX"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGg-Xb-EAa" customClass="CustomButton" customModule="HealthApp" customModuleProvider="target">
+                    <rect key="frame" x="25" y="329" width="343" height="48"/>
+                    <color key="backgroundColor" red="0.17396745089999999" green="0.52404808999999997" blue="0.40266591309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="gBd-ar-DrB"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Tiếp tục">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <state key="disabled">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="24"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udr-ZL-BG6">
+                    <rect key="frame" x="25" y="754" width="343" height="48"/>
+                    <color key="backgroundColor" red="0.96078431610000004" green="0.98431372640000003" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="e7C-TY-5kP"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="img-hotlinetext"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="24"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bjf-l0-jIQ" userLabel="PhoneView">
+                    <rect key="frame" x="25" y="253" width="343" height="56"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="JP4-mF-OEw">
+                            <rect key="frame" x="16" y="12" width="311" height="32"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+84" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYQ-R4-qS6">
+                                    <rect key="frame" x="0.0" y="0.0" width="31.333333333333332" height="32"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g8C-Vj-a73">
+                                    <rect key="frame" x="47.333333333333329" y="0.0" width="1" height="32"/>
+                                    <color key="backgroundColor" red="0.93333333730000001" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="1" id="fw1-0z-aUc"/>
+                                    </constraints>
+                                </view>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nhập số điện thoại" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eMj-TU-YdC">
+                                    <rect key="frame" x="64.333333333333329" y="0.0" width="246.66666666666669" height="32"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="JP4-mF-OEw" secondAttribute="bottom" constant="12" id="Na7-4f-ina"/>
+                        <constraint firstItem="JP4-mF-OEw" firstAttribute="leading" secondItem="bjf-l0-jIQ" secondAttribute="leading" constant="16" id="OeF-oB-2fe"/>
+                        <constraint firstItem="JP4-mF-OEw" firstAttribute="top" secondItem="bjf-l0-jIQ" secondAttribute="top" constant="12" id="c89-Nu-04Z"/>
+                        <constraint firstAttribute="trailing" secondItem="JP4-mF-OEw" secondAttribute="trailing" constant="16" id="kmy-Xw-nVd"/>
+                        <constraint firstAttribute="height" constant="56" id="oAw-w9-Jxd"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="yGg-Xb-EAa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="3Ki-Xn-a9d"/>
+                <constraint firstItem="bjf-l0-jIQ" firstAttribute="top" secondItem="dAu-Dk-s4s" secondAttribute="bottom" constant="56" id="3lE-H2-j2D"/>
+                <constraint firstItem="yGg-Xb-EAa" firstAttribute="top" secondItem="bjf-l0-jIQ" secondAttribute="bottom" constant="20" id="5k9-Yg-XjD"/>
+                <constraint firstItem="udr-ZL-BG6" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="-16" id="LY5-AS-fLI"/>
+                <constraint firstItem="dAu-Dk-s4s" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Paw-Ao-XIq"/>
+                <constraint firstItem="udr-ZL-BG6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="QXA-Rw-EC9"/>
+                <constraint firstItem="bjf-l0-jIQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Yv9-1P-kN7"/>
+                <constraint firstItem="bjf-l0-jIQ" firstAttribute="width" secondItem="yGg-Xb-EAa" secondAttribute="width" id="ZG0-3Z-5TF"/>
+                <constraint firstItem="dAu-Dk-s4s" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="gk3-Wi-uZ7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="udr-ZL-BG6" secondAttribute="trailing" constant="25" id="sdP-EA-Bxu"/>
+                <constraint firstItem="dAu-Dk-s4s" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="tsT-Pv-qtL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yGg-Xb-EAa" secondAttribute="trailing" constant="25" id="vqd-Bf-ead"/>
+            </constraints>
+            <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="img-bgSignUp" width="375" height="188"/>
+        <image name="img-hotlinetext" width="218" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
