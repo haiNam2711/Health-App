@@ -79,6 +79,10 @@ class IntroViewController: UIViewController {
         let destinationVC = SignUpViewController()
         navigationController?.pushViewController(destinationVC, animated: true)
     }
+    @IBAction func logInButtonTapped(_ sender: UIButton) {
+        let destinationVC = SignUpViewController()
+        navigationController?.pushViewController(destinationVC, animated: true)
+    }
     
 }
 //MARK: - Set up Intro Collection View Data and Delegate

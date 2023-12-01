@@ -43,6 +43,10 @@ class SignUpViewController: UIViewController {
         phoneView.layer.shadowRadius = 20
         
     }
+    @IBAction func goToOtpTapped(_ sender: Any) {
+        let destinationVC = OTPViewController()
+        navigationController?.pushViewController(destinationVC, animated: true)
+    }
     
 }
 
