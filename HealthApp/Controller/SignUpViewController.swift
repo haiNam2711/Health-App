@@ -9,9 +9,9 @@ import UIKit
 
 class SignUpViewController: UIViewController {
     
-    @IBOutlet weak var phoneView: UIView!
-    @IBOutlet weak var textfield: UITextField!
-    @IBOutlet weak var goButton: CustomButton!
+    @IBOutlet private weak var phoneView: UIView!
+    @IBOutlet private weak var textfield: UITextField!
+    @IBOutlet private weak var goButton: CustomButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,15 +23,15 @@ class SignUpViewController: UIViewController {
         
         textfield.delegate = self
 
-        navigationItem.leftBarButtonItem = customBackButton()
-        navigationItem.rightBarButtonItem = customLanguageButton()
+        navigationItem.leftBarButtonItem = customBarButton(width: 32, imageName: "ic-back")
+        navigationItem.rightBarButtonItem = customBarButton(width: 69, imageName: "img-language")
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
        view.addGestureRecognizer(tap)
 
     }
     
-    func setUpShadowPhoneView() {
+    private func setUpShadowPhoneView() {
         phoneView.layer.cornerRadius = 28
         phoneView.layer.borderColor = UIColor(red: 0.93, green: 0.94, blue: 0.96, alpha: 1).cgColor
         phoneView.layer.borderWidth = 1
@@ -53,33 +53,17 @@ extension SignUpViewController {
         navigationController?.popViewController(animated: true)
     }
     
-    func customBackButton() -> UIBarButtonItem {
+    private func customBarButton(width: Int, imageName: String) -> UIBarButtonItem {
         let button = UIButton(type: .system)
-        button.frame = CGRect(x: 0, y: 0, width: 32, height: 32)
+        button.frame = CGRect(x: 0, y: 0, width: width, height: 32)
         button.backgroundColor = UIColor(red: 0, green: 61/255, blue: 115/255, alpha: 0.3)
         button.layer.cornerRadius = 16 // Đặt góc để tạo hình tròn
         button.tintColor = .white
-        
-        if let image = UIImage(named: "ic-back") {
+        if let image = UIImage(named: imageName) {
             button.setImage(image, for: .normal)
         }
         
         button.addTarget(self, action: #selector(dismissSelf), for: .touchUpInside)
-        
-        let customBarButtonItem = UIBarButtonItem(customView: button)
-        return customBarButtonItem
-    }
-    
-    func customLanguageButton() -> UIBarButtonItem{
-        let button = UIButton(type: .system)
-        button.frame = CGRect(x: 0, y: 0, width: 69, height: 32)
-        button.backgroundColor = UIColor(red: 0, green: 61/255, blue: 115/255, alpha: 0.3)
-        button.layer.cornerRadius = 16 // Đặt góc để tạo hình tròn
-        button.tintColor = .white
-        
-        if let image = UIImage(named: "img-language") {
-            button.setImage(image, for: .normal)
-        }
         
         let customBarButtonItem = UIBarButtonItem(customView: button)
         return customBarButtonItem
