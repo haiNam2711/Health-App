@@ -26,20 +26,39 @@ class IntroViewController: UIViewController {
         introCollectionView.isPagingEnabled = true
         introCollectionView.showsHorizontalScrollIndicator = false
         
-        setUpButtonFont()
+        setTranslucentNavBar()
         
+        setUpButtonFont()
+
         photos = imagePhotos(imageNames: K.IntroVCConstant.PhotoArray)
         let nib = UINib(nibName: K.IntroVCConstant.CellNibName, bundle: nil)
         introCollectionView.register(nib, forCellWithReuseIdentifier: K.IntroVCConstant.CellId)
-
+        
+    }
+    
+    func setTranslucentNavBar() {
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        introCollectionView.contentInsetAdjustmentBehavior = .never
     }
     
     private func setUpButtonFont() {
-        topLbl.font = UIFont(name: K.Font.NunitoBold, size: 24)
-        bottomLbl.font = UIFont(name: K.Font.NunitoRegular, size: 14)
-        logInButton.titleLabel?.font = UIFont(name: K.Font.NunitoBold, size: 15)
-        signUpButton.titleLabel?.font = UIFont(name: K.Font.NunitoBold, size: 15)
+        topLbl.font = GetFont.nunitoBold(24)
+        bottomLbl.font = GetFont.nunitoRegular(14)
+        logInButton.titleLabel?.font = GetFont.nunitoBold(15)
+        signUpButton.titleLabel?.font = GetFont.nunitoBold(15)
+        
+        configUpdateButton(logInButton)
+        configUpdateButton(signUpButton)
+        
         signUpButton.layer.borderColor = UIColor(red: 0.14, green: 0.16, blue: 0.38, alpha: 1).cgColor
+    }
+    
+    func configUpdateButton(_ button: UIButton) {
+        var newConfiguration = button.configuration
+        newConfiguration?.attributedTitle?.font = GetFont.nunitoBold(15)
+        button.configuration = newConfiguration
     }
     
     func setNewStepper(withIndex num: Int) {
@@ -56,9 +75,13 @@ class IntroViewController: UIViewController {
         return res
     }
 
+    @IBAction func signUpButtonTapped(_ sender: UIButton) {
+        let destinationVC = SignUpViewController()
+        navigationController?.pushViewController(destinationVC, animated: true)
+    }
     
 }
-//MARK: - Set up Intro Collection View
+//MARK: - Set up Intro Collection View Data and Delegate
 extension IntroViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -72,7 +95,7 @@ extension IntroViewController: UICollectionViewDataSource, UICollectionViewDeleg
     }
     
 }
-
+//MARK: - Collection Delegate FlowLayout
 extension IntroViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let size = collectionView.bounds.size
@@ -92,6 +115,7 @@ extension IntroViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
+//MARK: - Completion Handler of CollectionView when complete scroll to new image
 extension IntroViewController: UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let visibleRect = CGRect(origin: introCollectionView.contentOffset, size: introCollectionView.bounds.size)
@@ -102,5 +126,5 @@ extension IntroViewController: UIScrollViewDelegate {
             setNewStepper(withIndex: currentIndex)
         }
     }
-
+    
 }

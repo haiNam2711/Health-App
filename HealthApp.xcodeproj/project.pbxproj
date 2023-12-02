@@ -11,6 +11,11 @@
 		261C3A4F2B18E4DE00CFA902 /* IntroCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261C3A4D2B18E4DE00CFA902 /* IntroCollectionViewCell.swift */; };
 		261C3A502B18E4DE00CFA902 /* IntroCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 261C3A4E2B18E4DE00CFA902 /* IntroCollectionViewCell.xib */; };
 		261C3A522B18E50300CFA902 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261C3A512B18E50300CFA902 /* Constant.swift */; };
+		261C3A562B18FF3D00CFA902 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261C3A542B18FF3D00CFA902 /* SignUpViewController.swift */; };
+		261C3A572B18FF3D00CFA902 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 261C3A552B18FF3D00CFA902 /* SignUpViewController.xib */; };
+		263296912B19CCF70097758E /* GetFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263296902B19CCF70097758E /* GetFont.swift */; };
+		263296972B19DB400097758E /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263296962B19DB400097758E /* CustomButton.swift */; };
+		2632969B2B19E48F0097758E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2632969A2B19E48F0097758E /* String+Extension.swift */; };
 		2648A6852B187CD300347505 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2648A6842B187CD300347505 /* AppDelegate.swift */; };
 		2648A6872B187CD300347505 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2648A6862B187CD300347505 /* SceneDelegate.swift */; };
 		2648A68E2B187CD400347505 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2648A68D2B187CD400347505 /* Assets.xcassets */; };
@@ -23,6 +28,11 @@
 		261C3A4D2B18E4DE00CFA902 /* IntroCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroCollectionViewCell.swift; sourceTree = "<group>"; };
 		261C3A4E2B18E4DE00CFA902 /* IntroCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntroCollectionViewCell.xib; sourceTree = "<group>"; };
 		261C3A512B18E50300CFA902 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		261C3A542B18FF3D00CFA902 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		261C3A552B18FF3D00CFA902 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		263296902B19CCF70097758E /* GetFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFont.swift; sourceTree = "<group>"; };
+		263296962B19DB400097758E /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		2632969A2B19E48F0097758E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		2648A6812B187CD300347505 /* HealthApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2648A6842B187CD300347505 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2648A6862B187CD300347505 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +53,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		261C3A532B18FF1200CFA902 /* IntroView */ = {
+			isa = PBXGroup;
+			children = (
+				2648A6A02B1881F200347505 /* IntroViewController.xib */,
+				261C3A4D2B18E4DE00CFA902 /* IntroCollectionViewCell.swift */,
+				261C3A4E2B18E4DE00CFA902 /* IntroCollectionViewCell.xib */,
+			);
+			path = IntroView;
+			sourceTree = "<group>";
+		};
+		261C3A582B18FF4500CFA902 /* SignUpView */ = {
+			isa = PBXGroup;
+			children = (
+				261C3A552B18FF3D00CFA902 /* SignUpViewController.xib */,
+				263296962B19DB400097758E /* CustomButton.swift */,
+			);
+			path = SignUpView;
+			sourceTree = "<group>";
+		};
 		2648A6782B187CD300347505 = {
 			isa = PBXGroup;
 			children = (
@@ -69,7 +98,7 @@
 				2648A69A2B18800500347505 /* View */,
 				2648A69B2B18800A00347505 /* Controller */,
 				2648A69D2B18815C00347505 /* Resources */,
-				2648A69E2B18816E00347505 /* U */,
+				2648A69E2B18816E00347505 /* Utilities */,
 			);
 			path = HealthApp;
 			sourceTree = "<group>";
@@ -93,9 +122,8 @@
 		2648A69A2B18800500347505 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2648A6A02B1881F200347505 /* IntroViewController.xib */,
-				261C3A4D2B18E4DE00CFA902 /* IntroCollectionViewCell.swift */,
-				261C3A4E2B18E4DE00CFA902 /* IntroCollectionViewCell.xib */,
+				261C3A532B18FF1200CFA902 /* IntroView */,
+				261C3A582B18FF4500CFA902 /* SignUpView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -104,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				2648A69F2B1881F200347505 /* IntroViewController.swift */,
+				261C3A542B18FF3D00CFA902 /* SignUpViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -124,18 +153,20 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		2648A69E2B18816E00347505 /* U */ = {
+		2648A69E2B18816E00347505 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				261C3A512B18E50300CFA902 /* Constant.swift */,
+				2632969A2B19E48F0097758E /* String+Extension.swift */,
 			);
-			path = U;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		2648A6A32B188DE500347505 /* Font */ = {
 			isa = PBXGroup;
 			children = (
 				261C3A422B18950500CFA902 /* NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf */,
+				263296902B19CCF70097758E /* GetFont.swift */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -198,6 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				261C3A572B18FF3D00CFA902 /* SignUpViewController.xib in Resources */,
 				261C3A462B18C0E900CFA902 /* NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf in Resources */,
 				2648A68E2B187CD400347505 /* Assets.xcassets in Resources */,
 				2648A6A22B1881F200347505 /* IntroViewController.xib in Resources */,
@@ -212,11 +244,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				261C3A562B18FF3D00CFA902 /* SignUpViewController.swift in Sources */,
+				2632969B2B19E48F0097758E /* String+Extension.swift in Sources */,
 				2648A6A12B1881F200347505 /* IntroViewController.swift in Sources */,
 				2648A6852B187CD300347505 /* AppDelegate.swift in Sources */,
 				261C3A522B18E50300CFA902 /* Constant.swift in Sources */,
 				2648A6872B187CD300347505 /* SceneDelegate.swift in Sources */,
+				263296972B19DB400097758E /* CustomButton.swift in Sources */,
 				261C3A4F2B18E4DE00CFA902 /* IntroCollectionViewCell.swift in Sources */,
+				263296912B19CCF70097758E /* GetFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
