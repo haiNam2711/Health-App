@@ -16,8 +16,7 @@ class IntroViewController: UIViewController {
     @IBOutlet private weak var bottomLbl: UILabel!
     @IBOutlet private var stepper: [UIView]!
     
-    private let photos = K.IntroVCConstant.PhotoArray
-    
+    private var photos: [UIImage]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +29,8 @@ class IntroViewController: UIViewController {
         setTranslucentNavBar()
         
         setUpButtonFont()
+
+        photos = imagePhotos(imageNames: K.IntroVCConstant.PhotoArray)
         let nib = UINib(nibName: K.IntroVCConstant.CellNibName, bundle: nil)
         introCollectionView.register(nib, forCellWithReuseIdentifier: K.IntroVCConstant.CellId)
         
@@ -65,6 +66,15 @@ class IntroViewController: UIViewController {
             stepper[i].backgroundColor = (stepper[i].tag == num) ? UIColor(named: K.Color.darkGreen) : UIColor(named: K.Color.lightGreen)
         }
     }
+    
+    func imagePhotos(imageNames: [String]) -> [UIImage] {
+        var res : [UIImage] = []
+        for str in imageNames {
+            res.append(UIImage(named: str)!)
+        }
+        return res
+    }
+
     @IBAction func signUpButtonTapped(_ sender: UIButton) {
         let destinationVC = SignUpViewController()
         navigationController?.pushViewController(destinationVC, animated: true)
@@ -75,12 +85,12 @@ class IntroViewController: UIViewController {
 extension IntroViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return photos.count
+        return photos!.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.IntroVCConstant.CellId, for: indexPath) as! IntroCollectionViewCell
-        cell.imageView.image = UIImage(named: photos[indexPath.row])
+        cell.imageView.image = photos![indexPath.row]
         return cell
     }
     
