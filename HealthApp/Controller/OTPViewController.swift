@@ -68,7 +68,7 @@ class OTPViewController: UIViewController, UITextFieldDelegate {
         resendOTPButton.configuration = newConfiguration
         
         
-        var newConfiguration2 = coordinatorButton.configuration
+        let newConfiguration2 = coordinatorButton.configuration
         newConfiguration?.attributedTitle?.font = GetFont.nunitoBold(17)
         coordinatorButton.configuration = newConfiguration2
     }

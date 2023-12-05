@@ -22,5 +22,6 @@ struct K {
     struct Font {
         static let NunitoBold = "NunitoSans-12ptExtraLight_Bold"
         static let NunitoRegular = "NunitoSans-12ptExtraLight_Regular"
+        static let NunitoSemiBold = "NunitoSans-12ptExtraLight_SemiBold"
     }
 }

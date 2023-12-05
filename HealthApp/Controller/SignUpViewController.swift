@@ -10,6 +10,7 @@ import UIKit
 class SignUpViewController: UIViewController {
     
     @IBOutlet weak var phoneView: UIView!
+    @IBOutlet weak var extensionLabel: UILabel!
     @IBOutlet weak var textfield: UITextField!
     @IBOutlet weak var goButton: CustomButton!
     
@@ -22,6 +23,9 @@ class SignUpViewController: UIViewController {
         goButton.isEnabled = false
         
         textfield.delegate = self
+        textfield.font = GetFont.nunitoSemiBold(17)
+        setUpShadowPhoneView()
+        extensionLabel.font = GetFont.nunitoSemiBold(17)
         setUpShadowPhoneView()
         
         navigationItem.leftBarButtonItem = customBackButton()

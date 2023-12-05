@@ -18,10 +18,8 @@
 		2632969B2B19E48F0097758E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2632969A2B19E48F0097758E /* String+Extension.swift */; };
 		263296A12B19EEA20097758E /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2632969F2B19EEA20097758E /* OTPViewController.swift */; };
 		263296A22B19EEA20097758E /* OTPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 263296A02B19EEA20097758E /* OTPViewController.xib */; };
-		263296D32B1DBAEC0097758E /* Button+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263296D22B1DBAEC0097758E /* Button+Extension.swift */; };
 		263296D52B1DC35B0097758E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263296D42B1DC35B0097758E /* UIView+Extension.swift */; };
 		263296D92B1DD6E90097758E /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263296D82B1DD6E90097758E /* OTPTextField.swift */; };
-		263296DD2B1E54520097758E /* TextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263296DC2B1E54520097758E /* TextField+Extension.swift */; };
 		2648A6852B187CD300347505 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2648A6842B187CD300347505 /* AppDelegate.swift */; };
 		2648A6872B187CD300347505 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2648A6862B187CD300347505 /* SceneDelegate.swift */; };
 		2648A68E2B187CD400347505 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2648A68D2B187CD400347505 /* Assets.xcassets */; };
@@ -42,10 +40,8 @@
 		2632969A2B19E48F0097758E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		2632969F2B19EEA20097758E /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
 		263296A02B19EEA20097758E /* OTPViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPViewController.xib; sourceTree = "<group>"; };
-		263296D22B1DBAEC0097758E /* Button+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Extension.swift"; sourceTree = "<group>"; };
 		263296D42B1DC35B0097758E /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		263296D82B1DD6E90097758E /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
-		263296DC2B1E54520097758E /* TextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extension.swift"; sourceTree = "<group>"; };
 		2648A6812B187CD300347505 /* HealthApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2648A6842B187CD300347505 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2648A6862B187CD300347505 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -183,9 +179,7 @@
 			children = (
 				261C3A512B18E50300CFA902 /* Constant.swift */,
 				2632969A2B19E48F0097758E /* String+Extension.swift */,
-				263296D22B1DBAEC0097758E /* Button+Extension.swift */,
 				263296D42B1DC35B0097758E /* UIView+Extension.swift */,
-				263296DC2B1E54520097758E /* TextField+Extension.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -286,9 +280,7 @@
 				2648A6872B187CD300347505 /* SceneDelegate.swift in Sources */,
 				263296972B19DB400097758E /* CustomButton.swift in Sources */,
 				261C3A4F2B18E4DE00CFA902 /* IntroCollectionViewCell.swift in Sources */,
-				263296DD2B1E54520097758E /* TextField+Extension.swift in Sources */,
 				263296912B19CCF70097758E /* GetFont.swift in Sources */,
-				263296D32B1DBAEC0097758E /* Button+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

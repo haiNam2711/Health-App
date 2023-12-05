@@ -15,6 +15,8 @@ struct GetFont {
     static func nunitoRegular(_ size: CGFloat) -> UIFont? {
         return UIFont(name: K.Font.NunitoRegular, size: size)
     }
-    
+    static func nunitoSemiBold(_ size: CGFloat) -> UIFont? {
+        return UIFont(name: K.Font.NunitoSemiBold, size: size)
+    }
 }
 

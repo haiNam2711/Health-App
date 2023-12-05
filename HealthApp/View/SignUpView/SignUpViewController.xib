@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpViewController" customModule="HealthApp" customModuleProvider="target">
             <connections>
+                <outlet property="extensionLabel" destination="BYQ-R4-qS6" id="fdA-kn-stm"/>
                 <outlet property="goButton" destination="yGg-Xb-EAa" id="QFC-aD-hZz"/>
                 <outlet property="phoneView" destination="bjf-l0-jIQ" id="kJD-p4-5jh"/>
                 <outlet property="textfield" destination="eMj-TU-YdC" id="5h5-xQ-QQ8"/>
@@ -70,20 +71,20 @@
                             <rect key="frame" x="16" y="12" width="311" height="32"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+84" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYQ-R4-qS6">
-                                    <rect key="frame" x="0.0" y="0.0" width="31.333333333333332" height="32"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="29.333333333333332" height="32"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g8C-Vj-a73">
-                                    <rect key="frame" x="47.333333333333329" y="0.0" width="1" height="32"/>
+                                    <rect key="frame" x="45.333333333333329" y="0.0" width="1" height="32"/>
                                     <color key="backgroundColor" red="0.93333333730000001" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="1" id="fw1-0z-aUc"/>
                                     </constraints>
                                 </view>
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="94233707" placeholder="Nhập số điện thoại" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eMj-TU-YdC">
-                                    <rect key="frame" x="64.333333333333329" y="0.0" width="246.66666666666669" height="32"/>
+                                    <rect key="frame" x="62.333333333333329" y="0.0" width="248.66666666666669" height="32"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                 </textField>
@@ -119,11 +120,6 @@
             <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
         </view>
     </objects>
-    <designables>
-        <designable name="yGg-Xb-EAa">
-            <size key="intrinsicContentSize" width="56" height="30"/>
-        </designable>
-    </designables>
     <resources>
         <image name="img-bgSignUp" width="375" height="188"/>
         <image name="img-hotlinetext" width="218" height="24"/>
