@@ -51,8 +51,6 @@ class IntroViewController: UIViewController {
         
         configUpdateButton(logInButton)
         configUpdateButton(signUpButton)
-        
-        signUpButton.layer.borderColor = UIColor(red: 0.14, green: 0.16, blue: 0.38, alpha: 1).cgColor
     }
     
     func configUpdateButton(_ button: UIButton) {

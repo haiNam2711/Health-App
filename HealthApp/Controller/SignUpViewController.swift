@@ -9,6 +9,7 @@ import UIKit
 
 class SignUpViewController: UIViewController {
     
+    @IBOutlet weak var nationExtension: UILabel!
     @IBOutlet weak var phoneView: UIView!
     @IBOutlet weak var extensionLabel: UILabel!
     @IBOutlet weak var textfield: UITextField!
@@ -21,6 +22,8 @@ class SignUpViewController: UIViewController {
         goButton.setBackgroundColor(UIColor(named: K.Color.darkGreen), for: .normal)
         goButton.setBackgroundColor(UIColor(named: K.Color.lightGreen), for: .disabled)
         goButton.isEnabled = false
+        nationExtension.font = GetFont.nunitoSemiBold(17)
+        textfield.font = GetFont.nunitoSemiBold(17)
         
         textfield.delegate = self
         textfield.font = GetFont.nunitoSemiBold(17)
@@ -37,16 +40,11 @@ class SignUpViewController: UIViewController {
     }
     
     func setUpShadowPhoneView() {
-        phoneView.layer.cornerRadius = 28
-        phoneView.layer.borderColor = UIColor(red: 0.93, green: 0.94, blue: 0.96, alpha: 1).cgColor
-        phoneView.layer.borderWidth = 1
-        
         // Áp dụng đổ bóng
         phoneView.layer.shadowColor = UIColor.black.cgColor
         phoneView.layer.shadowOpacity = 0.2
         phoneView.layer.shadowOffset = CGSize(width: 0, height: 4)
         phoneView.layer.shadowRadius = 20
-        
     }
     @IBAction func goToOtpTapped(_ sender: Any) {
         let destinationVC = OTPViewController()
@@ -105,12 +103,7 @@ extension SignUpViewController: UITextFieldDelegate {
         }
         var threshHold = 9
         threshHold = (text != "" && text[0] == "0") ? 10 : 9
-        
-        if textField.text!.count >= threshHold {
-            goButton.isEnabled = true
-        } else {
-            goButton.isEnabled = false
-        }
+        goButton.isEnabled = textField.text!.count >= threshHold ? true : false
     }
     
     @objc func dismissKeyboard() {

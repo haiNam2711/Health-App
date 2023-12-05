@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="extensionLabel" destination="BYQ-R4-qS6" id="fdA-kn-stm"/>
                 <outlet property="goButton" destination="yGg-Xb-EAa" id="QFC-aD-hZz"/>
+                <outlet property="nationExtension" destination="BYQ-R4-qS6" id="fSy-TN-72I"/>
                 <outlet property="phoneView" destination="bjf-l0-jIQ" id="kJD-p4-5jh"/>
                 <outlet property="textfield" destination="eMj-TU-YdC" id="5h5-xQ-QQ8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -99,6 +100,17 @@
                         <constraint firstAttribute="trailing" secondItem="JP4-mF-OEw" secondAttribute="trailing" constant="16" id="kmy-Xw-nVd"/>
                         <constraint firstAttribute="height" constant="56" id="oAw-w9-Jxd"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="28"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.93335944410000005" green="0.93752020599999997" blue="0.95816928150000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
