@@ -22,13 +22,14 @@ class SignUpViewController: UIViewController {
         goButton.isEnabled = false
         
         textfield.delegate = self
-
+        setUpShadowPhoneView()
+        
         navigationItem.leftBarButtonItem = customBackButton()
         navigationItem.rightBarButtonItem = customLanguageButton()
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-       view.addGestureRecognizer(tap)
-
+        view.addGestureRecognizer(tap)
+        
     }
     
     func setUpShadowPhoneView() {
@@ -45,6 +46,7 @@ class SignUpViewController: UIViewController {
     }
     @IBAction func goToOtpTapped(_ sender: Any) {
         let destinationVC = OTPViewController()
+        destinationVC.setPhoneNum(textfield.text!)
         navigationController?.pushViewController(destinationVC, animated: true)
     }
     
@@ -53,11 +55,11 @@ class SignUpViewController: UIViewController {
 //MARK: - Set up left and right barbutton
 extension SignUpViewController {
     
-    @objc func dismissSelf() {
+    @objc private func dismissSelf() {
         navigationController?.popViewController(animated: true)
     }
     
-    func customBackButton() -> UIBarButtonItem {
+    private func customBackButton() -> UIBarButtonItem {
         let button = UIButton(type: .system)
         button.frame = CGRect(x: 0, y: 0, width: 32, height: 32)
         button.backgroundColor = UIColor(red: 0, green: 61/255, blue: 115/255, alpha: 0.3)

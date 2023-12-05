@@ -82,7 +82,7 @@
                                         <constraint firstAttribute="width" constant="1" id="fw1-0z-aUc"/>
                                     </constraints>
                                 </view>
-                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nhập số điện thoại" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eMj-TU-YdC">
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="94233707" placeholder="Nhập số điện thoại" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eMj-TU-YdC">
                                     <rect key="frame" x="64.333333333333329" y="0.0" width="246.66666666666669" height="32"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
@@ -119,6 +119,11 @@
             <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
         </view>
     </objects>
+    <designables>
+        <designable name="yGg-Xb-EAa">
+            <size key="intrinsicContentSize" width="56" height="30"/>
+        </designable>
+    </designables>
     <resources>
         <image name="img-bgSignUp" width="375" height="188"/>
         <image name="img-hotlinetext" width="218" height="24"/>

@@ -18,11 +18,16 @@
 		2632969B2B19E48F0097758E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2632969A2B19E48F0097758E /* String+Extension.swift */; };
 		263296A12B19EEA20097758E /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2632969F2B19EEA20097758E /* OTPViewController.swift */; };
 		263296A22B19EEA20097758E /* OTPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 263296A02B19EEA20097758E /* OTPViewController.xib */; };
+		263296D32B1DBAEC0097758E /* Button+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263296D22B1DBAEC0097758E /* Button+Extension.swift */; };
+		263296D52B1DC35B0097758E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263296D42B1DC35B0097758E /* UIView+Extension.swift */; };
+		263296D92B1DD6E90097758E /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263296D82B1DD6E90097758E /* OTPTextField.swift */; };
+		263296DD2B1E54520097758E /* TextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263296DC2B1E54520097758E /* TextField+Extension.swift */; };
 		2648A6852B187CD300347505 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2648A6842B187CD300347505 /* AppDelegate.swift */; };
 		2648A6872B187CD300347505 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2648A6862B187CD300347505 /* SceneDelegate.swift */; };
 		2648A68E2B187CD400347505 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2648A68D2B187CD400347505 /* Assets.xcassets */; };
 		2648A6A12B1881F200347505 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2648A69F2B1881F200347505 /* IntroViewController.swift */; };
 		2648A6A22B1881F200347505 /* IntroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2648A6A02B1881F200347505 /* IntroViewController.xib */; };
+		269523E22B1EC4650065089A /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 269523E12B1EC4650065089A /* Inter-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +42,10 @@
 		2632969A2B19E48F0097758E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		2632969F2B19EEA20097758E /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
 		263296A02B19EEA20097758E /* OTPViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPViewController.xib; sourceTree = "<group>"; };
+		263296D22B1DBAEC0097758E /* Button+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Extension.swift"; sourceTree = "<group>"; };
+		263296D42B1DC35B0097758E /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		263296D82B1DD6E90097758E /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
+		263296DC2B1E54520097758E /* TextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extension.swift"; sourceTree = "<group>"; };
 		2648A6812B187CD300347505 /* HealthApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2648A6842B187CD300347505 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2648A6862B187CD300347505 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +53,7 @@
 		2648A6922B187CD400347505 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2648A69F2B1881F200347505 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		2648A6A02B1881F200347505 /* IntroViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntroViewController.xib; sourceTree = "<group>"; };
+		269523E12B1EC4650065089A /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				261C3A552B18FF3D00CFA902 /* SignUpViewController.xib */,
-				263296962B19DB400097758E /* CustomButton.swift */,
 			);
 			path = SignUpView;
 			sourceTree = "<group>";
@@ -80,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				263296A02B19EEA20097758E /* OTPViewController.xib */,
+				263296D82B1DD6E90097758E /* OTPTextField.swift */,
 			);
 			path = OTPView;
 			sourceTree = "<group>";
@@ -134,6 +144,7 @@
 		2648A69A2B18800500347505 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				263296962B19DB400097758E /* CustomButton.swift */,
 				261C3A532B18FF1200CFA902 /* IntroView */,
 				261C3A582B18FF4500CFA902 /* SignUpView */,
 				263296A32B19EEAA0097758E /* OTPView */,
@@ -172,6 +183,9 @@
 			children = (
 				261C3A512B18E50300CFA902 /* Constant.swift */,
 				2632969A2B19E48F0097758E /* String+Extension.swift */,
+				263296D22B1DBAEC0097758E /* Button+Extension.swift */,
+				263296D42B1DC35B0097758E /* UIView+Extension.swift */,
+				263296DC2B1E54520097758E /* TextField+Extension.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -179,6 +193,7 @@
 		2648A6A32B188DE500347505 /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				269523E12B1EC4650065089A /* Inter-Medium.ttf */,
 				261C3A422B18950500CFA902 /* NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf */,
 				263296902B19CCF70097758E /* GetFont.swift */,
 			);
@@ -247,6 +262,7 @@
 				261C3A572B18FF3D00CFA902 /* SignUpViewController.xib in Resources */,
 				261C3A462B18C0E900CFA902 /* NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf in Resources */,
 				2648A68E2B187CD400347505 /* Assets.xcassets in Resources */,
+				269523E22B1EC4650065089A /* Inter-Medium.ttf in Resources */,
 				2648A6A22B1881F200347505 /* IntroViewController.xib in Resources */,
 				261C3A502B18E4DE00CFA902 /* IntroCollectionViewCell.xib in Resources */,
 			);
@@ -260,15 +276,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				263296A12B19EEA20097758E /* OTPViewController.swift in Sources */,
+				263296D92B1DD6E90097758E /* OTPTextField.swift in Sources */,
 				261C3A562B18FF3D00CFA902 /* SignUpViewController.swift in Sources */,
 				2632969B2B19E48F0097758E /* String+Extension.swift in Sources */,
 				2648A6A12B1881F200347505 /* IntroViewController.swift in Sources */,
 				2648A6852B187CD300347505 /* AppDelegate.swift in Sources */,
 				261C3A522B18E50300CFA902 /* Constant.swift in Sources */,
+				263296D52B1DC35B0097758E /* UIView+Extension.swift in Sources */,
 				2648A6872B187CD300347505 /* SceneDelegate.swift in Sources */,
 				263296972B19DB400097758E /* CustomButton.swift in Sources */,
 				261C3A4F2B18E4DE00CFA902 /* IntroCollectionViewCell.swift in Sources */,
+				263296DD2B1E54520097758E /* TextField+Extension.swift in Sources */,
 				263296912B19CCF70097758E /* GetFont.swift in Sources */,
+				263296D32B1DBAEC0097758E /* Button+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
