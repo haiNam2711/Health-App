@@ -19,3 +19,14 @@ struct HomeData: Decodable {
     let promotionList: [Promotion]
     let doctorList: [Doctor]
 }
+
+struct DoctorResponse: Decodable {
+    let status: Int
+    let message: String
+    let code: Int
+    let data: DoctorItem
+}
+
+struct DoctorItem: Decodable {
+    let items: [Doctor]
+}
