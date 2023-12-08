@@ -6,8 +6,8 @@
 	<string></string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf</string>
 		<string>Inter-Medium.ttf</string>
+		<string>NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

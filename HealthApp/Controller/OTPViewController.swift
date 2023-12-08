@@ -130,7 +130,8 @@ class OTPViewController: UIViewController, UITextFieldDelegate {
     }
     @IBAction func coordinatorButtonTapped(_ sender: CustomButton) {
         if getOTP() == "111111" {
-            
+            let destinationVC = HomeViewController()
+            navigationController?.pushViewController(destinationVC, animated: true)
         } else {
             errorLabel.isHidden = false
             resendButtonConstrainToOtp.constant = 68
@@ -199,7 +200,6 @@ extension OTPViewController {
     // Dùng để setborder cho field đang được editting
     func textFieldDidBeginEditing(_ textField: UITextField) {
         firstTime = true
-        isEditingNow += 1
         guard let currentIndex = otpTextFields.firstIndex(of: textField) else {
             return
         }
@@ -295,6 +295,7 @@ extension OTPViewController {
         if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
             let keyboardRectangle = keyboardFrame.cgRectValue
             let keyboardHeight = keyboardRectangle.height
+            isEditingNow += 1
             if isEditingNow == 1 {
                 buttonConstrainBottom.constant += keyboardHeight
             }

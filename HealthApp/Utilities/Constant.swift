@@ -14,6 +14,10 @@ struct K {
         static let PhotoArray = ["img-intro1", "img-intro2", "img-intro3"]
     }
     
+    struct HomeVC {
+        static let CellID = "horizontalListCell"
+    }
+    
     struct Color {
         static let darkGreen = "DarkGreen"
         static let lightGreen = "LightGreen"
