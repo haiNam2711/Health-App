@@ -45,6 +45,11 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = true
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = false
+
+    }
 
 }
 
@@ -104,6 +109,17 @@ extension HomeViewController: UICollectionViewDataSource {
         if kind == UICollectionView.elementKindSectionHeader {
             let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerView", for: indexPath) as! InformCollectionReusableView
             headerView.titleLabel.text = headerTitles[indexPath.section]
+            headerView.coordinatorButtonTapped = {
+                switch indexPath.section {
+                case 0:
+                    print(0)
+                case 1:
+                    print(1)
+                default:
+                    let destinationVC = DoctorViewController()
+                    self.navigationController?.pushViewController(destinationVC, animated: true)
+                }
+            }
             return headerView
         } else {
             return UICollectionReusableView()

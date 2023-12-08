@@ -14,7 +14,6 @@ class InformCollectionReusableView: UICollectionReusableView {
         lb.translatesAutoresizingMaskIntoConstraints = false
         return lb
     }()
-    
     let coordinatorButton: UIButton = {
         let bt = UIButton()
         bt.translatesAutoresizingMaskIntoConstraints = false
@@ -22,6 +21,7 @@ class InformCollectionReusableView: UICollectionReusableView {
         bt.height = 20
         return bt
     }()
+    var coordinatorButtonTapped: (() -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,6 +35,12 @@ class InformCollectionReusableView: UICollectionReusableView {
         
         coordinatorButton.setImage(UIImage(named: "img-allbutton"), for: .normal)
         coordinatorButton.setImage(UIImage(named: "img-allbutton"), for: .selected)
+        
+        coordinatorButton.addTarget(self, action: #selector(handleCoordinatorButtonTap), for: .touchUpInside)
+    }
+    
+    @objc private func handleCoordinatorButtonTap() {
+        coordinatorButtonTapped?()
     }
     
     required init?(coder: NSCoder) {

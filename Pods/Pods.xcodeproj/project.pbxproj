@@ -208,7 +208,7 @@
 		874682873435EA47C02153F1C38B1C43 /* FormatIndicatedCacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FormatIndicatedCacheSerializer.swift; path = Sources/Cache/FormatIndicatedCacheSerializer.swift; sourceTree = "<group>"; };
 		88C69B3A89089E8E030E4C8ED0815F03 /* Resource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Resource.swift; path = Sources/General/ImageSource/Resource.swift; sourceTree = "<group>"; };
 		892501B55842DED3FC7C9E19FE77D6E9 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
-		89621DC4A3E81E0ADA257925C3783B85 /* Pods-HealthApp */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-HealthApp"; path = Pods_HealthApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89621DC4A3E81E0ADA257925C3783B85 /* Pods_HealthApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B1B9C2FF8DE27D831F16B8ABC20E7A4 /* KingfisherError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherError.swift; path = Sources/General/KingfisherError.swift; sourceTree = "<group>"; };
 		8C92FE3B7667A438B3E3D37AC49765C2 /* URLEncodedFormEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLEncodedFormEncoder.swift; path = Source/URLEncodedFormEncoder.swift; sourceTree = "<group>"; };
 		9076DE1379CC592743A715D430FC5098 /* MultipartUpload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartUpload.swift; path = Source/MultipartUpload.swift; sourceTree = "<group>"; };
@@ -424,7 +424,7 @@
 				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */,
 				C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher.framework */,
 				C298ABB78D9B05529B89D8322DB2E7B0 /* Kingfisher.bundle */,
-				89621DC4A3E81E0ADA257925C3783B85 /* Pods-HealthApp */,
+				89621DC4A3E81E0ADA257925C3783B85 /* Pods_HealthApp.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -592,7 +592,7 @@
 			);
 			name = "Pods-HealthApp";
 			productName = Pods_HealthApp;
-			productReference = 89621DC4A3E81E0ADA257925C3783B85 /* Pods-HealthApp */;
+			productReference = 89621DC4A3E81E0ADA257925C3783B85 /* Pods_HealthApp.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		9828BBC09E9FB1238624113D7456E59E /* Kingfisher-Kingfisher */ = {
