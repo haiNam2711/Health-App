@@ -30,3 +30,15 @@ struct DoctorResponse: Decodable {
 struct DoctorItem: Decodable {
     let items: [Doctor]
 }
+
+
+struct PromoResponse: Decodable {
+    let status: Int
+    let message: String
+    let code: Int
+    let data: PromoItem
+}
+
+struct PromoItem: Decodable {
+    let items: [Promotion]
+}

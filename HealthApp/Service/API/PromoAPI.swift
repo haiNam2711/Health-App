@@ -1,5 +1,5 @@
 //
-//  DoctorAPI.swift
+//  PromoAPI.swift
 //  HealthApp
 //
 //  Created by Hai Nam on 08/12/2023.
@@ -7,20 +7,20 @@
 
 import Foundation
 
-protocol DoctorAPIDelegate {
-    func fetchDataSuccessfully(data: [Doctor])
+protocol PromoAPIDelegate {
+    func fetchDataSuccessfully(data: [Promotion])
     func fetchDataFailed(error: Error)
 }
 
-class DoctorAPI {
+class PromoAPI {
     var url : String?
-    var delegate: DoctorAPIDelegate?
+    var delegate: PromoAPIDelegate?
     
     func fetchData() {
         guard let url else {
             return
         }
-        APIService.shared.fetchData(url) { (result: Result<DoctorResponse, Error>) in
+        APIService.shared.fetchData(url) { (result: Result<PromoResponse, Error>) in
             switch result {
             case .success(let response):
                 self.delegate?.fetchDataSuccessfully(data: response.data.items)
