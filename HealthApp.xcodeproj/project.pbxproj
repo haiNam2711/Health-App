@@ -27,6 +27,8 @@
 		261A98662B22FD1000BC1BA4 /* DoctorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261A98642B22FD1000BC1BA4 /* DoctorViewController.swift */; };
 		261A98672B22FD1000BC1BA4 /* DoctorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 261A98652B22FD1000BC1BA4 /* DoctorViewController.xib */; };
 		261A98692B23068400BC1BA4 /* DoctorAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261A98682B23068400BC1BA4 /* DoctorAPI.swift */; };
+		261A986C2B231E8F00BC1BA4 /* PromotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261A986A2B231E8F00BC1BA4 /* PromotionViewController.swift */; };
+		261A986D2B231E8F00BC1BA4 /* PromotionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 261A986B2B231E8F00BC1BA4 /* PromotionViewController.xib */; };
 		261C3A462B18C0E900CFA902 /* NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 261C3A422B18950500CFA902 /* NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf */; };
 		261C3A4F2B18E4DE00CFA902 /* IntroCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261C3A4D2B18E4DE00CFA902 /* IntroCollectionViewCell.swift */; };
 		261C3A502B18E4DE00CFA902 /* IntroCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 261C3A4E2B18E4DE00CFA902 /* IntroCollectionViewCell.xib */; };
@@ -45,6 +47,9 @@
 		2648A68E2B187CD400347505 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2648A68D2B187CD400347505 /* Assets.xcassets */; };
 		2648A6A12B1881F200347505 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2648A69F2B1881F200347505 /* IntroViewController.swift */; };
 		2648A6A22B1881F200347505 /* IntroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2648A6A02B1881F200347505 /* IntroViewController.xib */; };
+		2683A81E2B23513C00D192E6 /* PromoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2683A81C2B23513C00D192E6 /* PromoTableViewCell.swift */; };
+		2683A81F2B23513C00D192E6 /* PromoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2683A81D2B23513C00D192E6 /* PromoTableViewCell.xib */; };
+		2683A8212B23542D00D192E6 /* PromoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2683A8202B23542D00D192E6 /* PromoAPI.swift */; };
 		A9A1239533887D7352D6BBF1 /* Pods_HealthApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC6415A9A471A3C3F31AA88E /* Pods_HealthApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +75,8 @@
 		261A98642B22FD1000BC1BA4 /* DoctorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorViewController.swift; sourceTree = "<group>"; };
 		261A98652B22FD1000BC1BA4 /* DoctorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoctorViewController.xib; sourceTree = "<group>"; };
 		261A98682B23068400BC1BA4 /* DoctorAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorAPI.swift; sourceTree = "<group>"; };
+		261A986A2B231E8F00BC1BA4 /* PromotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionViewController.swift; sourceTree = "<group>"; };
+		261A986B2B231E8F00BC1BA4 /* PromotionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromotionViewController.xib; sourceTree = "<group>"; };
 		261C3A422B18950500CFA902 /* NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf"; path = "HealthApp/Resources/Font/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf"; sourceTree = SOURCE_ROOT; };
 		261C3A4D2B18E4DE00CFA902 /* IntroCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroCollectionViewCell.swift; sourceTree = "<group>"; };
 		261C3A4E2B18E4DE00CFA902 /* IntroCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntroCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -90,6 +97,9 @@
 		2648A6922B187CD400347505 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2648A69F2B1881F200347505 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		2648A6A02B1881F200347505 /* IntroViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntroViewController.xib; sourceTree = "<group>"; };
+		2683A81C2B23513C00D192E6 /* PromoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoTableViewCell.swift; sourceTree = "<group>"; };
+		2683A81D2B23513C00D192E6 /* PromoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromoTableViewCell.xib; sourceTree = "<group>"; };
+		2683A8202B23542D00D192E6 /* PromoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoAPI.swift; sourceTree = "<group>"; };
 		3A063B7F2E83F5103734255D /* Pods-HealthApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthApp.debug.xcconfig"; path = "Target Support Files/Pods-HealthApp/Pods-HealthApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CC6415A9A471A3C3F31AA88E /* Pods_HealthApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -127,18 +137,19 @@
 				261A98472B22B16600BC1BA4 /* APIService.swift */,
 				261A98552B22BB1500BC1BA4 /* HomeAPI.swift */,
 				261A98682B23068400BC1BA4 /* DoctorAPI.swift */,
+				2683A8202B23542D00D192E6 /* PromoAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
 		};
-		261A985B2B22F85500BC1BA4 /* Doctor */ = {
+		261A985B2B22F85500BC1BA4 /* DoctorView */ = {
 			isa = PBXGroup;
 			children = (
 				261A985C2B22F86F00BC1BA4 /* DoctorTableViewCell.swift */,
 				261A985D2B22F86F00BC1BA4 /* DoctorTableViewCell.xib */,
 				261A98652B22FD1000BC1BA4 /* DoctorViewController.xib */,
 			);
-			path = Doctor;
+			path = DoctorView;
 			sourceTree = "<group>";
 		};
 		261C3A532B18FF1200CFA902 /* IntroView */ = {
@@ -229,7 +240,8 @@
 				261C3A582B18FF4500CFA902 /* SignUpView */,
 				263296A32B19EEAA0097758E /* OTPView */,
 				261A982F2B21ACA400BC1BA4 /* HomeView */,
-				261A985B2B22F85500BC1BA4 /* Doctor */,
+				261A985B2B22F85500BC1BA4 /* DoctorView */,
+				2683A81B2B23508C00D192E6 /* PromoView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -242,6 +254,7 @@
 				2632969F2B19EEA20097758E /* OTPViewController.swift */,
 				261A98272B20F4D600BC1BA4 /* HomeViewController.swift */,
 				261A98642B22FD1000BC1BA4 /* DoctorViewController.swift */,
+				261A986A2B231E8F00BC1BA4 /* PromotionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -280,6 +293,16 @@
 				263296902B19CCF70097758E /* GetFont.swift */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		2683A81B2B23508C00D192E6 /* PromoView */ = {
+			isa = PBXGroup;
+			children = (
+				261A986B2B231E8F00BC1BA4 /* PromotionViewController.xib */,
+				2683A81C2B23513C00D192E6 /* PromoTableViewCell.swift */,
+				2683A81D2B23513C00D192E6 /* PromoTableViewCell.xib */,
+			);
+			path = PromoView;
 			sourceTree = "<group>";
 		};
 		4D9708C9651146A1EA0415CF /* Frameworks */ = {
@@ -364,6 +387,7 @@
 				261A983B2B21C87000BC1BA4 /* HorizontalListCollectionViewCell.xib in Resources */,
 				261A983F2B21C98200BC1BA4 /* NewsPromoCell.xib in Resources */,
 				261C3A462B18C0E900CFA902 /* NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf in Resources */,
+				261A986D2B231E8F00BC1BA4 /* PromotionViewController.xib in Resources */,
 				2648A68E2B187CD400347505 /* Assets.xcassets in Resources */,
 				2648A6A22B1881F200347505 /* IntroViewController.xib in Resources */,
 				261A985F2B22F86F00BC1BA4 /* DoctorTableViewCell.xib in Resources */,
@@ -371,6 +395,7 @@
 				261C3A502B18E4DE00CFA902 /* IntroCollectionViewCell.xib in Resources */,
 				261A982A2B20F4D600BC1BA4 /* HomeViewController.xib in Resources */,
 				261A98672B22FD1000BC1BA4 /* DoctorViewController.xib in Resources */,
+				2683A81F2B23513C00D192E6 /* PromoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +455,7 @@
 				261A985E2B22F86F00BC1BA4 /* DoctorTableViewCell.swift in Sources */,
 				261C3A562B18FF3D00CFA902 /* SignUpViewController.swift in Sources */,
 				261A98662B22FD1000BC1BA4 /* DoctorViewController.swift in Sources */,
+				2683A81E2B23513C00D192E6 /* PromoTableViewCell.swift in Sources */,
 				2632969B2B19E48F0097758E /* String+Extension.swift in Sources */,
 				2648A6A12B1881F200347505 /* IntroViewController.swift in Sources */,
 				2648A6852B187CD300347505 /* AppDelegate.swift in Sources */,
@@ -446,8 +472,10 @@
 				261A98292B20F4D600BC1BA4 /* HomeViewController.swift in Sources */,
 				263296912B19CCF70097758E /* GetFont.swift in Sources */,
 				261A98482B22B16600BC1BA4 /* APIService.swift in Sources */,
+				2683A8212B23542D00D192E6 /* PromoAPI.swift in Sources */,
 				261A98502B22B47300BC1BA4 /* Promotion.swift in Sources */,
 				261A984C2B22B45F00BC1BA4 /* Article.swift in Sources */,
+				261A986C2B231E8F00BC1BA4 /* PromotionViewController.swift in Sources */,
 				261A983A2B21C87000BC1BA4 /* HorizontalListCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

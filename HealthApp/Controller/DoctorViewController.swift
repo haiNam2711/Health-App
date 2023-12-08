@@ -27,6 +27,7 @@ class DoctorViewController: UIViewController {
         let nib = UINib(nibName: "DoctorTableViewCell", bundle: nil)
         doctorTableView.register(nib, forCellReuseIdentifier: "doctorTableCell")
         doctorTableView.showsVerticalScrollIndicator = false
+        doctorTableView.sectionHeaderTopPadding = 0
     }
 
 }
@@ -49,12 +50,20 @@ extension DoctorViewController: UITableViewDataSource, UITableViewDelegate {
         return 130
     }
     
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        return UIView()
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+        return view
     }
-    
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let view = UIView()
+        return view
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 12
+    }
+
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0.0001
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -72,7 +81,6 @@ extension DoctorViewController: DoctorAPIDelegate {
     
     func fetchDataSuccessfully(data: [Doctor]) {
         doctorList = data
-        print(doctorList?.count)
         doctorTableView.reloadData()
     }
     

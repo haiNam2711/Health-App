@@ -114,7 +114,8 @@ extension HomeViewController: UICollectionViewDataSource {
                 case 0:
                     print(0)
                 case 1:
-                    print(1)
+                    let destinationVC = PromotionViewController()
+                    self.navigationController?.pushViewController(destinationVC, animated: true)
                 default:
                     let destinationVC = DoctorViewController()
                     self.navigationController?.pushViewController(destinationVC, animated: true)
