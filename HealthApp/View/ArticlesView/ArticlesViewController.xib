@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ArticlesViewController" customModule="HealthApp" customModuleProvider="target">
+            <connections>
+                <outlet property="articlesTableView" destination="Nkg-mq-ZSd" id="4Oc-lg-rgj"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XF0-xm-M8Y">
+                    <rect key="frame" x="0.0" y="103" width="393" height="1"/>
+                    <color key="backgroundColor" red="0.93333333730000001" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="tJ8-bU-mtG"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Nkg-mq-ZSd">
+                    <rect key="frame" x="0.0" y="104.66666666666669" width="393" height="747.33333333333326"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="abW-Ue-cfM"/>
+                        <outlet property="delegate" destination="-1" id="058-aO-K92"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="XF0-xm-M8Y" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6Ny-0w-Nlr"/>
+                <constraint firstAttribute="trailing" secondItem="XF0-xm-M8Y" secondAttribute="trailing" id="EPL-Cq-b1a"/>
+                <constraint firstItem="Nkg-mq-ZSd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Xt1-K6-vSt"/>
+                <constraint firstItem="XF0-xm-M8Y" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="fBY-a4-fgu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Nkg-mq-ZSd" secondAttribute="trailing" id="hee-vp-70M"/>
+                <constraint firstItem="Nkg-mq-ZSd" firstAttribute="top" secondItem="XF0-xm-M8Y" secondAttribute="bottom" constant="0.5" id="uvF-Sc-pU3"/>
+                <constraint firstAttribute="bottom" secondItem="Nkg-mq-ZSd" secondAttribute="bottom" id="vHQ-iW-cDm"/>
+            </constraints>
+            <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="132" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

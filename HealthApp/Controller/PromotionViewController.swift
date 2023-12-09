@@ -36,51 +36,27 @@ class PromotionViewController: UIViewController {
 //MARK: - Tableview delegate datasource
 extension PromotionViewController: UITableViewDelegate, UITableViewDataSource {
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return promoList?.count ?? 0
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 78
+        return 102
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView()
         return view
     }
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 12))
-        
-        guard let sectionCount = promoList?.count else { return footerView }
-        // Thêm separatorView vào footerView
-        if section != sectionCount - 1 {
-            let separatorView = UIView(frame: CGRect(x: 0, y: 12, width: tableView.bounds.size.width, height: 1))
-            separatorView.backgroundColor = UIColor(red: 0.93, green: 0.93, blue: 0.93, alpha: 1)
-            footerView.addSubview(separatorView)
-        }
-        
-        return footerView
-    }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if section == 0 {
-            return 16
-        }
-        return 12
-    }
-
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 12
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let promoList else { return UITableViewCell() }
         let cell = tableView.dequeueReusableCell(withIdentifier: "promoTableCell", for: indexPath) as! PromoTableViewCell
-        cell.configWithData(promoList[indexPath.section])
-        cell.bookmark.tintColor = .white
+        cell.configWithData(promoList[indexPath.row])
         
         let bgColorView = UIView()
         bgColorView.backgroundColor = UIColor.clear

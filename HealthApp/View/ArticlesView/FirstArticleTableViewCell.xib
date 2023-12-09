@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="firstTableCell" rowHeight="219" id="KGk-i7-Jjw" customClass="FirstArticleTableViewCell" customModule="HealthApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="296"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="296"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S37-NZ-v6n">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="S37-NZ-v6n" secondAttribute="height" multiplier="375:200" id="VEz-ka-xih"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="mai-UH-2Am">
+                        <rect key="frame" x="16" y="212" width="343" height="72"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jio Health khởi động chương trình Doctor Tour 2021" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvd-iP-jdE">
+                                <rect key="frame" x="0.0" y="0.0" width="340" height="56"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZz-VJ-v0d">
+                                <rect key="frame" x="0.0" y="60" width="41.333333333333336" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="IaS-ut-OgA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="mai-UH-2Am" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="1nu-NY-nWM"/>
+                    <constraint firstItem="mai-UH-2Am" firstAttribute="top" secondItem="S37-NZ-v6n" secondAttribute="bottom" constant="12" id="GKy-au-Sph"/>
+                    <constraint firstItem="S37-NZ-v6n" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Jzi-Tg-i2Q"/>
+                    <constraint firstAttribute="trailing" secondItem="mai-UH-2Am" secondAttribute="trailing" constant="16" id="RAz-Aq-Tlt"/>
+                    <constraint firstAttribute="trailing" secondItem="S37-NZ-v6n" secondAttribute="trailing" id="guz-su-OCz"/>
+                    <constraint firstItem="S37-NZ-v6n" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="qjg-WJ-TAN"/>
+                    <constraint firstAttribute="bottom" secondItem="mai-UH-2Am" secondAttribute="bottom" constant="12" id="yo1-cu-rrK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dateLabel" destination="BZz-VJ-v0d" id="1hO-Ub-I0L"/>
+                <outlet property="titleImage" destination="S37-NZ-v6n" id="j4s-cv-r2F"/>
+                <outlet property="titleLabel" destination="uvd-iP-jdE" id="Sbr-iT-3bu"/>
+            </connections>
+            <point key="canvasLocation" x="251.14503816793894" y="50"/>
+        </tableViewCell>
+    </objects>
+</document>
