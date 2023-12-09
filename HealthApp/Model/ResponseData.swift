@@ -58,4 +58,13 @@ struct PromotionDetail: Decodable {
     let link: String
 }
 
+struct ArticleResponse: Decodable {
+    let status: Int
+    let message: String
+    let code: Int
+    let data: ArticleItem
+}
 
+struct ArticleItem: Decodable {
+    let items: [Article]
+}

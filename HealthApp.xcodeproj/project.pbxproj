@@ -53,6 +53,11 @@
 		2683A8242B23790400D192E6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2683A8222B23790400D192E6 /* DetailViewController.swift */; };
 		2683A8252B23790400D192E6 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2683A8232B23790400D192E6 /* DetailViewController.xib */; };
 		2683A8272B2385DB00D192E6 /* DetailAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2683A8262B2385DB00D192E6 /* DetailAPI.swift */; };
+		2683A82C2B24D75600D192E6 /* ArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2683A82A2B24D75600D192E6 /* ArticlesViewController.swift */; };
+		2683A82D2B24D75600D192E6 /* ArticlesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2683A82B2B24D75600D192E6 /* ArticlesViewController.xib */; };
+		2683A8302B24DF3600D192E6 /* FirstArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2683A82E2B24DF3600D192E6 /* FirstArticleTableViewCell.swift */; };
+		2683A8312B24DF3600D192E6 /* FirstArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2683A82F2B24DF3600D192E6 /* FirstArticleTableViewCell.xib */; };
+		2683A8332B24E45000D192E6 /* ArticleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2683A8322B24E45000D192E6 /* ArticleAPI.swift */; };
 		A9A1239533887D7352D6BBF1 /* Pods_HealthApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC6415A9A471A3C3F31AA88E /* Pods_HealthApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +111,11 @@
 		2683A8222B23790400D192E6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		2683A8232B23790400D192E6 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		2683A8262B2385DB00D192E6 /* DetailAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAPI.swift; sourceTree = "<group>"; };
+		2683A82A2B24D75600D192E6 /* ArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewController.swift; sourceTree = "<group>"; };
+		2683A82B2B24D75600D192E6 /* ArticlesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticlesViewController.xib; sourceTree = "<group>"; };
+		2683A82E2B24DF3600D192E6 /* FirstArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstArticleTableViewCell.swift; sourceTree = "<group>"; };
+		2683A82F2B24DF3600D192E6 /* FirstArticleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstArticleTableViewCell.xib; sourceTree = "<group>"; };
+		2683A8322B24E45000D192E6 /* ArticleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleAPI.swift; sourceTree = "<group>"; };
 		3A063B7F2E83F5103734255D /* Pods-HealthApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthApp.debug.xcconfig"; path = "Target Support Files/Pods-HealthApp/Pods-HealthApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CC6415A9A471A3C3F31AA88E /* Pods_HealthApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -145,6 +155,7 @@
 				261A98682B23068400BC1BA4 /* DoctorAPI.swift */,
 				2683A8202B23542D00D192E6 /* PromoAPI.swift */,
 				2683A8262B2385DB00D192E6 /* DetailAPI.swift */,
+				2683A8322B24E45000D192E6 /* ArticleAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -249,7 +260,8 @@
 				261A982F2B21ACA400BC1BA4 /* HomeView */,
 				261A985B2B22F85500BC1BA4 /* DoctorView */,
 				2683A81B2B23508C00D192E6 /* PromoView */,
-				2683A8232B23790400D192E6 /* DetailViewController.xib */,
+				2683A8282B24D72A00D192E6 /* DetailView */,
+				2683A8292B24D73700D192E6 /* ArticlesView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -264,6 +276,7 @@
 				261A98642B22FD1000BC1BA4 /* DoctorViewController.swift */,
 				261A986A2B231E8F00BC1BA4 /* PromotionViewController.swift */,
 				2683A8222B23790400D192E6 /* DetailViewController.swift */,
+				2683A82A2B24D75600D192E6 /* ArticlesViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -312,6 +325,24 @@
 				2683A81D2B23513C00D192E6 /* PromoTableViewCell.xib */,
 			);
 			path = PromoView;
+			sourceTree = "<group>";
+		};
+		2683A8282B24D72A00D192E6 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				2683A8232B23790400D192E6 /* DetailViewController.xib */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
+		2683A8292B24D73700D192E6 /* ArticlesView */ = {
+			isa = PBXGroup;
+			children = (
+				2683A82B2B24D75600D192E6 /* ArticlesViewController.xib */,
+				2683A82E2B24DF3600D192E6 /* FirstArticleTableViewCell.swift */,
+				2683A82F2B24DF3600D192E6 /* FirstArticleTableViewCell.xib */,
+			);
+			path = ArticlesView;
 			sourceTree = "<group>";
 		};
 		4D9708C9651146A1EA0415CF /* Frameworks */ = {
@@ -392,7 +423,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				263296A22B19EEA20097758E /* OTPViewController.xib in Resources */,
+				2683A82D2B24D75600D192E6 /* ArticlesViewController.xib in Resources */,
 				261C3A572B18FF3D00CFA902 /* SignUpViewController.xib in Resources */,
+				2683A8312B24DF3600D192E6 /* FirstArticleTableViewCell.xib in Resources */,
 				261A983B2B21C87000BC1BA4 /* HorizontalListCollectionViewCell.xib in Resources */,
 				261A983F2B21C98200BC1BA4 /* NewsPromoCell.xib in Resources */,
 				261C3A462B18C0E900CFA902 /* NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf in Resources */,
@@ -471,6 +504,7 @@
 				2648A6852B187CD300347505 /* AppDelegate.swift in Sources */,
 				261C3A522B18E50300CFA902 /* Constant.swift in Sources */,
 				261A983E2B21C98200BC1BA4 /* NewsPromoCell.swift in Sources */,
+				2683A82C2B24D75600D192E6 /* ArticlesViewController.swift in Sources */,
 				261A98562B22BB1500BC1BA4 /* HomeAPI.swift in Sources */,
 				263296D52B1DC35B0097758E /* UIView+Extension.swift in Sources */,
 				2648A6872B187CD300347505 /* SceneDelegate.swift in Sources */,
@@ -482,9 +516,11 @@
 				2683A8272B2385DB00D192E6 /* DetailAPI.swift in Sources */,
 				261A98292B20F4D600BC1BA4 /* HomeViewController.swift in Sources */,
 				263296912B19CCF70097758E /* GetFont.swift in Sources */,
+				2683A8332B24E45000D192E6 /* ArticleAPI.swift in Sources */,
 				261A98482B22B16600BC1BA4 /* APIService.swift in Sources */,
 				2683A8212B23542D00D192E6 /* PromoAPI.swift in Sources */,
 				261A98502B22B47300BC1BA4 /* Promotion.swift in Sources */,
+				2683A8302B24DF3600D192E6 /* FirstArticleTableViewCell.swift in Sources */,
 				261A984C2B22B45F00BC1BA4 /* Article.swift in Sources */,
 				2683A8242B23790400D192E6 /* DetailViewController.swift in Sources */,
 				261A986C2B231E8F00BC1BA4 /* PromotionViewController.swift in Sources */,

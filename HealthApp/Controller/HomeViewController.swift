@@ -118,7 +118,8 @@ extension HomeViewController: UICollectionViewDataSource {
             headerView.coordinatorButtonTapped = {
                 switch indexPath.section {
                 case 0:
-                    print(0)
+                    let destinationVC = ArticlesViewController()
+                    self.navigationController?.pushViewController(destinationVC, animated: true)
                 case 1:
                     let destinationVC = PromotionViewController()
                     self.navigationController?.pushViewController(destinationVC, animated: true)

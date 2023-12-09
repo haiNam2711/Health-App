@@ -17,27 +17,30 @@ class PromoTableViewCell: UITableViewCell {
     var bookmarkBool = false
     override func awakeFromNib() {
         super.awakeFromNib()
+        dateLabel.textColor = UIColor(red: 0.49, green: 0.52, blue: 0.6, alpha: 1)
+        titleLabel.font = GetFont.nunitoBold(13)
+        dateLabel.font = GetFont.nunitoRegular(12)
         // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func configWithData(_ data: Promotion) {
         titleLabel.text = data.name
         dateLabel.text = data.created_at
-        titleLabel.font = GetFont.nunitoBold(13)
-        dateLabel.font = GetFont.nunitoRegular(12)
         bookmarkBool = data.is_bookmark
-        dateLabel.textColor = UIColor(red: 0.49, green: 0.52, blue: 0.6, alpha: 1)
         if bookmarkBool == true {
             bookmark.setImage(UIImage(named: "ic-bookmark"), for: .normal)
         } else {
             bookmark.setImage(UIImage(named: "ic-bookmarkwhite"), for: .normal)
         }
+        bookmark.addTarget(self, action: #selector(toggleBookmark), for: .touchUpInside)
+        getOnlineImage(on: data.picture)
+    }
+    
+    func configWithData(_ data: Article) {
+        titleLabel.text = data.title
+        dateLabel.text = data.created_at
+        bookmarkBool = false
+        bookmark.setImage(UIImage(named: "ic-bookmarkwhite"), for: .normal)
         bookmark.addTarget(self, action: #selector(toggleBookmark), for: .touchUpInside)
         getOnlineImage(on: data.picture)
     }
