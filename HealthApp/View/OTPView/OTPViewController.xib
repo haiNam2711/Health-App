@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OTPViewController" customModule="HealthApp" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonConstrainBottom" destination="PAV-2p-uV6" id="LWT-Cq-zRH"/>
+                <outlet property="coordinatorButton" destination="bFW-Jk-7Nj" id="cCk-bO-oNq"/>
+                <outlet property="errorLabel" destination="Cou-UW-02B" id="vrx-PQ-Vd0"/>
+                <outlet property="introLabel" destination="M63-AK-89r" id="Hh3-8K-2TU"/>
+                <outlet property="otpStackView" destination="AwJ-t4-1k5" id="nK3-mp-TkM"/>
+                <outlet property="resendButtonConstrainToOtp" destination="q02-dg-MeT" id="5Oq-M2-M35"/>
+                <outlet property="resendOTPButton" destination="Ww1-GM-Ryk" id="FZk-dI-UAc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="otpTextFields" destination="wrG-WG-0Wh" collectionClass="NSMutableArray" id="eee-D9-G88"/>
+                <outletCollection property="otpTextFields" destination="O2C-9y-vRe" collectionClass="NSMutableArray" id="M66-SV-GQV"/>
+                <outletCollection property="otpTextFields" destination="Hje-YH-scq" collectionClass="NSMutableArray" id="jdE-vs-bjQ"/>
+                <outletCollection property="otpTextFields" destination="wUS-19-RFh" collectionClass="NSMutableArray" id="FAq-ky-ygw"/>
+                <outletCollection property="otpTextFields" destination="aFY-qX-g72" collectionClass="NSMutableArray" id="by8-NX-7gE"/>
+                <outletCollection property="otpTextFields" destination="Bdj-XG-e2V" collectionClass="NSMutableArray" id="o9I-2A-q65"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M63-AK-89r">
+                    <rect key="frame" x="25" y="123" width="343" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="75H-ik-EdR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="AwJ-t4-1k5">
+                    <rect key="frame" x="48.666666666666657" y="183" width="296" height="42"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bdj-XG-e2V" customClass="OTPTextField" customModule="HealthApp" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="36" height="42"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="42" id="jnc-cH-ePj"/>
+                                <constraint firstAttribute="width" constant="36" id="tLF-7n-uP9"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="7"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="DarkGreen"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="7"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                        <textField opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aFY-qX-g72" customClass="OTPTextField" customModule="HealthApp" customModuleProvider="target">
+                            <rect key="frame" x="52" y="0.0" width="36" height="42"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="36" id="8VF-Bh-UOG"/>
+                                <constraint firstAttribute="height" constant="42" id="VWE-Xc-V9Q"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="7"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="DarkGreen"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="7"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                        <textField opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wUS-19-RFh" customClass="OTPTextField" customModule="HealthApp" customModuleProvider="target">
+                            <rect key="frame" x="104" y="0.0" width="36" height="42"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="42" id="iek-wg-Vpm"/>
+                                <constraint firstAttribute="width" constant="36" id="ka8-F6-koB"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="7"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="DarkGreen"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="7"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                        <textField opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hje-YH-scq" customClass="OTPTextField" customModule="HealthApp" customModuleProvider="target">
+                            <rect key="frame" x="156" y="0.0" width="36" height="42"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="36" id="2rU-R9-cIy"/>
+                                <constraint firstAttribute="height" constant="42" id="vRc-7b-PgE"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="7"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="DarkGreen"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="7"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                        <textField opaque="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O2C-9y-vRe" customClass="OTPTextField" customModule="HealthApp" customModuleProvider="target">
+                            <rect key="frame" x="208.00000000000003" y="0.0" width="36" height="42"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="36" id="H9o-Js-x3Y"/>
+                                <constraint firstAttribute="height" constant="42" id="uLk-Fc-Ynt"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="7"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="DarkGreen"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="7"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                        <textField opaque="NO" tag="5" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wrG-WG-0Wh" customClass="OTPTextField" customModule="HealthApp" customModuleProvider="target">
+                            <rect key="frame" x="260" y="0.0" width="36" height="42"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="36" id="5UM-19-gCb"/>
+                                <constraint firstAttribute="height" constant="42" id="8om-Dm-F6P"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="7"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="DarkGreen"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="7"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ww1-GM-Ryk" customClass="CustomButton" customModule="HealthApp" customModuleProvider="target">
+                    <rect key="frame" x="102" y="257" width="189" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="ORU-8T-3g8"/>
+                    </constraints>
+                    <color key="tintColor" name="DarkGreen"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Gửi lại mã"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" name="DarkGreen"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="resendOTP:" destination="-1" eventType="touchUpInside" id="hJW-3K-IJV"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFW-Jk-7Nj" customClass="CustomButton" customModule="HealthApp" customModuleProvider="target">
+                    <rect key="frame" x="24" y="754" width="345" height="48"/>
+                    <color key="backgroundColor" red="0.17396745089999999" green="0.52404808999999997" blue="0.40266591309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="06r-7x-6Rp"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Tiếp tục">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="24"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="coordinatorButtonTapped:" destination="-1" eventType="touchUpInside" id="Ozh-kQ-zR9"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wgq-u2-4QN">
+                    <rect key="frame" x="0.0" y="103" width="393" height="2"/>
+                    <color key="backgroundColor" red="0.93333333730000001" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="FsA-vi-JiM"/>
+                    </constraints>
+                </view>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nhập sai mã xác thực" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cou-UW-02B">
+                    <rect key="frame" x="115" y="243" width="163" height="20.333333333333314"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.90980386729999996" green="0.2470588088" blue="0.2470588088" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.9529411793" green="0.96078431610000004" blue="0.98431372640000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="M63-AK-89r" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="36c-9s-fw1"/>
+                <constraint firstItem="Cou-UW-02B" firstAttribute="top" secondItem="AwJ-t4-1k5" secondAttribute="bottom" constant="18" id="3Qb-am-NXu"/>
+                <constraint firstItem="Ww1-GM-Ryk" firstAttribute="width" secondItem="M63-AK-89r" secondAttribute="width" multiplier="180/327" id="7t9-dl-ASI"/>
+                <constraint firstItem="AwJ-t4-1k5" firstAttribute="top" secondItem="M63-AK-89r" secondAttribute="bottom" constant="20" id="89G-Sd-Bk6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="M63-AK-89r" secondAttribute="trailing" constant="25" id="EII-RR-rra"/>
+                <constraint firstItem="Ww1-GM-Ryk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="O3w-Lh-nhD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="bFW-Jk-7Nj" secondAttribute="bottom" constant="16" id="PAV-2p-uV6"/>
+                <constraint firstItem="bFW-Jk-7Nj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="WZI-d0-EXo"/>
+                <constraint firstItem="Wgq-u2-4QN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bQC-BB-hbu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bFW-Jk-7Nj" secondAttribute="trailing" constant="24" id="bW9-U9-0Wn"/>
+                <constraint firstItem="Cou-UW-02B" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="o5w-l2-GIJ"/>
+                <constraint firstItem="Ww1-GM-Ryk" firstAttribute="top" secondItem="AwJ-t4-1k5" secondAttribute="bottom" constant="32" id="q02-dg-MeT"/>
+                <constraint firstItem="M63-AK-89r" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="sKg-Xo-4ZE"/>
+                <constraint firstItem="Wgq-u2-4QN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="sUI-Ac-AF0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Wgq-u2-4QN" secondAttribute="trailing" id="t82-QY-GgC"/>
+                <constraint firstItem="AwJ-t4-1k5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="vFc-JB-DwM"/>
+            </constraints>
+            <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="75.572519083969468" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="Bdj-XG-e2V">
+            <size key="intrinsicContentSize" width="32" height="34"/>
+        </designable>
+        <designable name="Hje-YH-scq">
+            <size key="intrinsicContentSize" width="32" height="34"/>
+        </designable>
+        <designable name="O2C-9y-vRe">
+            <size key="intrinsicContentSize" width="32" height="34"/>
+        </designable>
+        <designable name="Ww1-GM-Ryk">
+            <size key="intrinsicContentSize" width="99" height="34.333333333333336"/>
+        </designable>
+        <designable name="aFY-qX-g72">
+            <size key="intrinsicContentSize" width="32" height="34"/>
+        </designable>
+        <designable name="bFW-Jk-7Nj">
+            <size key="intrinsicContentSize" width="56" height="30"/>
+        </designable>
+        <designable name="wUS-19-RFh">
+            <size key="intrinsicContentSize" width="32" height="34"/>
+        </designable>
+        <designable name="wrG-WG-0Wh">
+            <size key="intrinsicContentSize" width="32" height="34"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="DarkGreen">
+            <color red="0.17000000178813934" green="0.52999997138977051" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
