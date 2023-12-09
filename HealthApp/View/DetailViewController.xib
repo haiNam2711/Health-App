@@ -10,10 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="HealthApp" customModuleProvider="target">
             <connections>
-                <outlet property="dateLabel" destination="K2v-cT-jdv" id="IiY-gb-YMm"/>
-                <outlet property="imagePicture" destination="qZP-9W-fqc" id="inV-e2-YMA"/>
                 <outlet property="paragraph" destination="uAn-Bg-f5d" id="xH1-Yh-M0V"/>
-                <outlet property="titleLabel" destination="PHK-MV-nka" id="wFA-Vo-RFg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -29,32 +26,9 @@
                         <constraint firstAttribute="height" constant="1" id="xJs-kr-I8i"/>
                     </constraints>
                 </view>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qZP-9W-fqc">
-                    <rect key="frame" x="0.0" y="102.99999999999999" width="393" height="209.66666666666663"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="qZP-9W-fqc" secondAttribute="height" multiplier="375:200" id="Mg7-j9-fj0"/>
-                    </constraints>
-                </imageView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Yu7-0i-0io">
-                    <rect key="frame" x="16" y="328.66666666666669" width="361" height="44.666666666666686"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHK-MV-nka">
-                            <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="20.333333333333332"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2v-cT-jdv">
-                            <rect key="frame" x="0.0" y="24.333333333333314" width="41.333333333333336" height="20.333333333333329"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                </stackView>
                 <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uAn-Bg-f5d">
-                    <rect key="frame" x="16" y="389.33333333333326" width="361" height="428.66666666666674"/>
-                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <rect key="frame" x="16" y="104" width="361" height="714"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <wkWebViewConfiguration key="configuration">
                         <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                         <wkPreferences key="preferences" minimumFontSize="30"/>
@@ -65,18 +39,12 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="uAn-Bg-f5d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="016-tW-uHv"/>
-                <constraint firstItem="qZP-9W-fqc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4lP-d8-Pki"/>
-                <constraint firstItem="qZP-9W-fqc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="E6y-BJ-qUW"/>
                 <constraint firstItem="3No-E4-rTf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="FBG-Ei-6Ye"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="uAn-Bg-f5d" secondAttribute="bottom" id="HJa-8D-WEG"/>
-                <constraint firstItem="uAn-Bg-f5d" firstAttribute="top" secondItem="Yu7-0i-0io" secondAttribute="bottom" constant="16" id="Htc-iF-p2g"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3No-E4-rTf" secondAttribute="trailing" id="Ieo-gL-byX"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Yu7-0i-0io" secondAttribute="trailing" constant="16" id="UuY-X0-NgZ"/>
+                <constraint firstItem="uAn-Bg-f5d" firstAttribute="top" secondItem="3No-E4-rTf" secondAttribute="bottom" id="aAj-fv-gCV"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uAn-Bg-f5d" secondAttribute="trailing" constant="16" id="f27-R9-GMt"/>
-                <constraint firstItem="Yu7-0i-0io" firstAttribute="top" secondItem="qZP-9W-fqc" secondAttribute="bottom" constant="16" id="iWx-tZ-eMo"/>
                 <constraint firstItem="3No-E4-rTf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ong-qT-4X0"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qZP-9W-fqc" secondAttribute="trailing" id="tSS-mF-btU"/>
-                <constraint firstItem="Yu7-0i-0io" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="yGx-8X-ggB"/>
             </constraints>
             <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="131" y="-11"/>

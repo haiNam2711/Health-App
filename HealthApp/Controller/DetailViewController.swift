@@ -7,12 +7,10 @@
 
 import UIKit
 import WebKit
+import ProgressHUD
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var imagePicture: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var paragraph: WKWebView!
     
     var link: String?
@@ -20,6 +18,12 @@ class DetailViewController: UIViewController {
     var detailAPI = DetailAPI()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ProgressHUD.animationType = .activityIndicator
+        ProgressHUD.animate()
+        ProgressHUD.mediaSize = 30
+        
+        paragraph.navigationDelegate = self
         if let font = GetFont.nunitoBold(18) {
             self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: font]
         }
@@ -30,10 +34,11 @@ class DetailViewController: UIViewController {
         detailAPI.delegate = self
         detailAPI.url = "https://gist.github.com/CanThaiLinh/84b5e70b30b4544b1cc575fc41d8938e/raw"
         detailAPI.fetchData()
-        
-        titleLabel.font = GetFont.nunitoBold(20)
-        dateLabel.font = GetFont.nunitoRegular(12)
-        dateLabel.textColor = UIColor(red: 0.49, green: 0.52, blue: 0.6, alpha: 1)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        ProgressHUD.remove()
     }
 
 }
@@ -43,9 +48,6 @@ extension DetailViewController: DetailAPIDelegate {
     
     
     func fetchDataSuccessfully(data: PromotionDetail) {
-        getOnlineImage(on: data.picture)
-        titleLabel.text = data.name
-        dateLabel.text = data.created_at
         link = data.link
         
         // Kích thước chữ bạn muốn
@@ -62,26 +64,26 @@ extension DetailViewController: DetailAPIDelegate {
         print(error.localizedDescription)
     }
     
-    func getOnlineImage(on url: String) {
-        imagePicture.kf.setImage(
-            with: URL(string: url),
-            placeholder: UIImage(named: "img-placeholder"),
-            options: [
-                .transition(.fade(1)), // Hiệu ứng hiển thị khi ảnh được tải lên
-                .cacheOriginalImage // Lưu ảnh gốc vào bộ nhớ cache
-            ],
-            completionHandler: { result in
-                switch result {
-                case .failure(_):
-                    self.imagePicture.image = UIImage(named: "img-placeholder")
-                case .success(_):
-                    return
-                }
-            }
-        )
+}
+//MARK: - WKNavigationDelegate
+extension DetailViewController: WKNavigationDelegate {
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        // Quá trình tải hoàn thành, ẩn ActivityIndicator
+        ProgressHUD.remove()
+    }
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        // Quá trình tải thất bại, ẩn ActivityIndicator
+        
+        ProgressHUD.remove()
+        
+        // Xử lý lỗi nếu cần
+        print("Loading failed with error: \(error.localizedDescription)")
     }
     
 }
+
 //MARK: - Back Button
 extension DetailViewController {
     

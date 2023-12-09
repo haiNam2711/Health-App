@@ -8,4 +8,5 @@ target 'HealthApp' do
   # Pods for HealthApp
   pod 'Alamofire'
   pod 'Kingfisher', '~> 7.0'
+  pod 'ProgressHUD'
 end
