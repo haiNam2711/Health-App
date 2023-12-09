@@ -13,4 +13,5 @@ struct Promotion: Decodable {
     let created_at: String
     let category_name: String
     let is_bookmark: Bool
+    let content: String
 }
