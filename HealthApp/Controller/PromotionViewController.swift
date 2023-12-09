@@ -81,7 +81,17 @@ extension PromotionViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "promoTableCell", for: indexPath) as! PromoTableViewCell
         cell.configWithData(promoList[indexPath.section])
         cell.bookmark.tintColor = .white
+        
+        let bgColorView = UIView()
+        bgColorView.backgroundColor = UIColor.clear
+        cell.selectedBackgroundView = bgColorView
+
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        self.navigationController?.pushViewController(DetailViewController(), animated: true)
     }
     
 }

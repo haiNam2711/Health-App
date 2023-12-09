@@ -42,3 +42,20 @@ struct PromoResponse: Decodable {
 struct PromoItem: Decodable {
     let items: [Promotion]
 }
+
+struct DetailResponse: Decodable {
+    let status: Int
+    let message: String
+    let code: Int
+    let data: PromotionDetail
+}
+
+struct PromotionDetail: Decodable {
+    let name: String
+    let content: String
+    let picture: String
+    let created_at: String
+    let link: String
+}
+
+

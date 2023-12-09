@@ -50,6 +50,9 @@
 		2683A81E2B23513C00D192E6 /* PromoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2683A81C2B23513C00D192E6 /* PromoTableViewCell.swift */; };
 		2683A81F2B23513C00D192E6 /* PromoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2683A81D2B23513C00D192E6 /* PromoTableViewCell.xib */; };
 		2683A8212B23542D00D192E6 /* PromoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2683A8202B23542D00D192E6 /* PromoAPI.swift */; };
+		2683A8242B23790400D192E6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2683A8222B23790400D192E6 /* DetailViewController.swift */; };
+		2683A8252B23790400D192E6 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2683A8232B23790400D192E6 /* DetailViewController.xib */; };
+		2683A8272B2385DB00D192E6 /* DetailAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2683A8262B2385DB00D192E6 /* DetailAPI.swift */; };
 		A9A1239533887D7352D6BBF1 /* Pods_HealthApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC6415A9A471A3C3F31AA88E /* Pods_HealthApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +103,9 @@
 		2683A81C2B23513C00D192E6 /* PromoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoTableViewCell.swift; sourceTree = "<group>"; };
 		2683A81D2B23513C00D192E6 /* PromoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromoTableViewCell.xib; sourceTree = "<group>"; };
 		2683A8202B23542D00D192E6 /* PromoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoAPI.swift; sourceTree = "<group>"; };
+		2683A8222B23790400D192E6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		2683A8232B23790400D192E6 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		2683A8262B2385DB00D192E6 /* DetailAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAPI.swift; sourceTree = "<group>"; };
 		3A063B7F2E83F5103734255D /* Pods-HealthApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthApp.debug.xcconfig"; path = "Target Support Files/Pods-HealthApp/Pods-HealthApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CC6415A9A471A3C3F31AA88E /* Pods_HealthApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -138,6 +144,7 @@
 				261A98552B22BB1500BC1BA4 /* HomeAPI.swift */,
 				261A98682B23068400BC1BA4 /* DoctorAPI.swift */,
 				2683A8202B23542D00D192E6 /* PromoAPI.swift */,
+				2683A8262B2385DB00D192E6 /* DetailAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -242,6 +249,7 @@
 				261A982F2B21ACA400BC1BA4 /* HomeView */,
 				261A985B2B22F85500BC1BA4 /* DoctorView */,
 				2683A81B2B23508C00D192E6 /* PromoView */,
+				2683A8232B23790400D192E6 /* DetailViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -255,6 +263,7 @@
 				261A98272B20F4D600BC1BA4 /* HomeViewController.swift */,
 				261A98642B22FD1000BC1BA4 /* DoctorViewController.swift */,
 				261A986A2B231E8F00BC1BA4 /* PromotionViewController.swift */,
+				2683A8222B23790400D192E6 /* DetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -389,6 +398,7 @@
 				261C3A462B18C0E900CFA902 /* NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf in Resources */,
 				261A986D2B231E8F00BC1BA4 /* PromotionViewController.xib in Resources */,
 				2648A68E2B187CD400347505 /* Assets.xcassets in Resources */,
+				2683A8252B23790400D192E6 /* DetailViewController.xib in Resources */,
 				2648A6A22B1881F200347505 /* IntroViewController.xib in Resources */,
 				261A985F2B22F86F00BC1BA4 /* DoctorTableViewCell.xib in Resources */,
 				261A98452B22225F00BC1BA4 /* DoctorCollectionViewCell.xib in Resources */,
@@ -469,12 +479,14 @@
 				263296972B19DB400097758E /* CustomButton.swift in Sources */,
 				261C3A4F2B18E4DE00CFA902 /* IntroCollectionViewCell.swift in Sources */,
 				261A98582B22BEEA00BC1BA4 /* ResponseData.swift in Sources */,
+				2683A8272B2385DB00D192E6 /* DetailAPI.swift in Sources */,
 				261A98292B20F4D600BC1BA4 /* HomeViewController.swift in Sources */,
 				263296912B19CCF70097758E /* GetFont.swift in Sources */,
 				261A98482B22B16600BC1BA4 /* APIService.swift in Sources */,
 				2683A8212B23542D00D192E6 /* PromoAPI.swift in Sources */,
 				261A98502B22B47300BC1BA4 /* Promotion.swift in Sources */,
 				261A984C2B22B45F00BC1BA4 /* Article.swift in Sources */,
+				2683A8242B23790400D192E6 /* DetailViewController.swift in Sources */,
 				261A986C2B231E8F00BC1BA4 /* PromotionViewController.swift in Sources */,
 				261A983A2B21C87000BC1BA4 /* HorizontalListCollectionViewCell.swift in Sources */,
 			);

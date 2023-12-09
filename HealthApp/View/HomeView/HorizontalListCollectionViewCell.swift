@@ -19,6 +19,7 @@ class HorizontalListCollectionViewCell: UICollectionViewCell {
     var numberOfCell: Int?
     var type: ListType?
     var itemList: [Decodable]?
+    var coordinateToDetail: (() -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -54,10 +55,17 @@ extension HorizontalListCollectionViewCell: UICollectionViewDelegateFlowLayout {
 }
 
 //MARK: - Collection DataSource
-extension HorizontalListCollectionViewCell: UICollectionViewDataSource {
+extension HorizontalListCollectionViewCell: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return numberOfCell ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let coordinateToDetail else { return }
+        if type == .article || type == .promo {
+            coordinateToDetail()
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

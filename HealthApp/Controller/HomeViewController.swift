@@ -92,10 +92,16 @@ extension HomeViewController: UICollectionViewDataSource {
             cell.type = .article
             cell.itemList = homeData?.articleList
             cell.numberOfCell = homeData?.articleList.count
+            cell.coordinateToDetail = {
+                self.navigationController?.pushViewController(DetailViewController(), animated: true)
+            }
         case 1:
             cell.type = .promo
             cell.itemList = homeData?.promotionList
             cell.numberOfCell = homeData?.promotionList.count
+            cell.coordinateToDetail = {
+                self.navigationController?.pushViewController(DetailViewController(), animated: true)
+            }
         default:
             cell.type = .doctor
             cell.itemList = homeData?.doctorList
