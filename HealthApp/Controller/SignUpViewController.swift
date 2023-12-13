@@ -49,7 +49,7 @@ class SignUpViewController: UIViewController {
     }
     @IBAction func goToOtpTapped(_ sender: Any) {
         guard let text = textfield.text else { return }
-        if checkString(string: text) == true {
+        if checkFullDigit(string: text) == true {
             let destinationVC = OTPViewController()
             destinationVC.setPhoneNum(textfield.text!)
             navigationController?.pushViewController(destinationVC, animated: true)
@@ -57,7 +57,7 @@ class SignUpViewController: UIViewController {
             ProgressHUD.banner("Error", "Your phone number is not in correct format.", delay: 2.0)
         }
     }
-    func checkString(string: String) -> Bool {
+    func checkFullDigit(string: String) -> Bool {
         let digits = CharacterSet.decimalDigits
         let stringSet = CharacterSet(charactersIn: string)
 

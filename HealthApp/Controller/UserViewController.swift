@@ -82,10 +82,29 @@ class UserViewController: UIViewController {
         grayOverlayView?.frame = scrollView.frame
     }
     @IBAction func coordinatorButtonTapped(_ sender: UIButton) {
-        saveUser()
-        navigationController?.popViewController(animated: true)
+        guard let email = emailTextField.text, let phone = phoneTextField.text else { return }
+        if isValidEmail(email) && checkFullDigit(string: phone) {
+            saveUser()
+            navigationController?.popViewController(animated: true)
+        } else {
+            ProgressHUD.banner("Error", "Your email or phone number is not in correct format", delay: 2.0)
+        }
     }
-    
+    func isValidEmail(_ email: String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailPred.evaluate(with: email)
+    }
+    func checkFullDigit(string: String) -> Bool {
+        let digits = CharacterSet.decimalDigits
+        let stringSet = CharacterSet(charactersIn: string)
+
+        var threshHold = 9
+        threshHold = string != "" && string[0] == "0" ? 10 : 9
+        
+        return digits.isSuperset(of: stringSet) && string.count == threshHold
+    }
     @IBAction func birthDateButtonTapped(_ sender: UIButton) {
         grayOverlayView!.isHidden = false
         birthDatePicker.setValue(UIColor.systemGray6, forKey: "backgroundColor")
