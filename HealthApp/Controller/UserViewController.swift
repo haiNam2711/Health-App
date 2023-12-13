@@ -76,7 +76,10 @@ class UserViewController: UIViewController {
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
-
+    }
+    
+    override func viewWillLayoutSubviews() {
+        grayOverlayView?.frame = scrollView.frame
     }
     @IBAction func coordinatorButtonTapped(_ sender: UIButton) {
         saveUser()
@@ -142,7 +145,7 @@ extension UserViewController {
 extension UserViewController {
     
     func setUpGrayView() {
-        grayOverlayView = UIView(frame: scrollView.frame)
+        grayOverlayView = UIView()
         grayOverlayView?.backgroundColor = UIColor.black.withAlphaComponent(0.1)
         grayOverlayView?.isHidden = true
         view.insertSubview(grayOverlayView!, belowSubview: birthDatePicker)

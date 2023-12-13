@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class SignUpViewController: UIViewController {
     
@@ -47,11 +48,21 @@ class SignUpViewController: UIViewController {
         phoneView.layer.shadowRadius = 20
     }
     @IBAction func goToOtpTapped(_ sender: Any) {
-        let destinationVC = OTPViewController()
-        destinationVC.setPhoneNum(textfield.text!)
-        navigationController?.pushViewController(destinationVC, animated: true)
+        guard let text = textfield.text else { return }
+        if checkString(string: text) == true {
+            let destinationVC = OTPViewController()
+            destinationVC.setPhoneNum(textfield.text!)
+            navigationController?.pushViewController(destinationVC, animated: true)
+        } else {
+            ProgressHUD.banner("Error", "Your phone number is not in correct format.", delay: 2.0)
+        }
     }
-    
+    func checkString(string: String) -> Bool {
+        let digits = CharacterSet.decimalDigits
+        let stringSet = CharacterSet(charactersIn: string)
+
+        return digits.isSuperset(of: stringSet)
+    }
 }
 
 //MARK: - Set up left and right barbutton
@@ -102,8 +113,8 @@ extension SignUpViewController: UITextFieldDelegate {
             return
         }
         var threshHold = 9
-        threshHold = (text != "" && text[0] == "0") ? 10 : 9
-        goButton.isEnabled = textField.text!.count >= threshHold ? true : false
+        threshHold = text != "" && text[0] == "0" ? 10 : 9
+        goButton.isEnabled = textField.text!.count == threshHold ? true : false
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
