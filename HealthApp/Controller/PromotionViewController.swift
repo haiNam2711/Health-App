@@ -15,9 +15,6 @@ class PromotionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let font = GetFont.nunitoBold(18) {
-            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: font]
-        }
         navigationItem.title = "Danh sách khuyến mãi"
         navigationItem.leftBarButtonItem = customBackButton()
         
@@ -36,21 +33,21 @@ class PromotionViewController: UIViewController {
 //MARK: - Tableview delegate datasource
 extension PromotionViewController: UITableViewDelegate, UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return promoList?.count ?? 0
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 102
-    }
-    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView()
         return view
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 4
+        return 4 // 16 = 12 + 4
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return promoList?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 102 // 78 + 12 x 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

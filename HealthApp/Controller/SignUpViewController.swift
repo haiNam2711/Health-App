@@ -106,6 +106,14 @@ extension SignUpViewController: UITextFieldDelegate {
         goButton.isEnabled = textField.text!.count >= threshHold ? true : false
     }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        phoneView.borderColor = UIColor(named: K.Color.darkGreen)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        phoneView.borderColor = UIColor(red: 0.93, green: 0.94, blue: 0.96, alpha: 1)
+    }
+    
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }

@@ -6,16 +6,21 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var informationCollectionView: UICollectionView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var avaterImageView: UIButton!
     
     let headerTitles = ["Tin tức", "Khuyến mãi", "Giới thiệu bác sĩ"]
     let homeApiCaller = HomeAPI()
+    let userAPI = UserAPI()
     var homeData: HomeData?
+    var user: User?
+    let userDefault = UserDefault()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +29,18 @@ class HomeViewController: UIViewController {
         homeApiCaller.delegate = self
         homeApiCaller.fetchData()
         
+        userAPI.url = "https://gist.githubusercontent.com/CanThaiLinh/00762adf68d2dddf0aea6396fd1b153a/raw"
+        userAPI.delegate = self
+        if let user = userDefault.loadUser() {
+            nameLabel.text = user.name + " " + user.last_name
+        } else {
+            userAPI.fetchData()
+        }
         // Set font
         nameLabel.font = GetFont.nunitoBold(15)
         statusLabel.font = GetFont.nunitoRegular(12)
         
-        // Set upper corner
+        // Set upper corner radius
         informationCollectionView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         informationCollectionView.layer.sublayers?.forEach { layer in
             layer.cornerRadius = informationCollectionView.layer.cornerRadius
@@ -44,13 +56,19 @@ class HomeViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = true
+        if let user = userDefault.loadUser() {
+            nameLabel.text = user.name + " " + user.last_name
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = false
-
     }
 
+    @IBAction func avatarTapped(_ sender: UIButton) {
+        let destinationVC = UserViewController()
+        navigationController?.pushViewController(destinationVC, animated: true)
+    }
 }
 
 //MARK: - Collection Delegate FlowLayout
@@ -58,9 +76,9 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let size = collectionView.bounds.size
         if indexPath.section == 2 {
-            return CGSize(width: size.width, height: 185)
+            return CGSize(width: size.width, height: 201) // 185 + 8x2
         } else {
-            return CGSize(width: size.width, height: 258)
+            return CGSize(width: size.width, height: 236) // 220 + 8x2
         }
     }
     
@@ -70,7 +88,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         let size = collectionView.bounds.size
-        return CGSize(width: size.width, height: 50)
+        return CGSize(width: size.width, height: 50) // 20 + 22 + 8
     }
 }
 
@@ -137,7 +155,12 @@ extension HomeViewController: UICollectionViewDataSource {
 }
 
 //MARK: - HomeAPIDelegate
-extension HomeViewController: HomeApiDelegate {
+extension HomeViewController: HomeApiDelegate, UserAPIDelegate {
+    func fetchDataSuccessfully(data: User) {
+        nameLabel.text = data.name + " " + data.last_name
+        getOnlineImage(on: data.avatar)
+        userDefault.saveUser(data)
+    }
     
     func fetchDataSuccessfully(data: HomeData) {
         homeData = data
@@ -148,4 +171,8 @@ extension HomeViewController: HomeApiDelegate {
         print(error.localizedDescription)
     }
 
+    func getOnlineImage(on url: String) {
+        let modifier = AnyImageModifier { return $0.withRenderingMode(.alwaysOriginal) }
+        avaterImageView.kf.setImage(with: url as? Resource, for: .normal, placeholder: nil, options: [.imageModifier(modifier)], progressBlock: nil, completionHandler: nil)
+    }
 }

@@ -25,9 +25,7 @@ class OTPViewController: UIViewController, UITextFieldDelegate {
     var secondsRemaining = 60
     
     override func viewDidLoad() {
-        if let font = GetFont.nunitoBold(18) {
-            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: font]
-        }
+        super.viewDidLoad()
         navigationItem.title = "Xác minh số điện thoại"
         navigationItem.leftBarButtonItem = customBackButton()
         
@@ -42,6 +40,13 @@ class OTPViewController: UIViewController, UITextFieldDelegate {
         
         addKeyboardMonitor()
         keyboardNotificate()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardDidHideNotification, object: nil)
+        
+        countdownTimer?.invalidate()
     }
     
     private func setUpErrorLabel() {
@@ -139,10 +144,6 @@ class OTPViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        countdownTimer?.invalidate()
-    }
-    
-    deinit {
         countdownTimer?.invalidate()
     }
     

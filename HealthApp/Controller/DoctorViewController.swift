@@ -15,11 +15,9 @@ class DoctorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let font = GetFont.nunitoBold(18) {
-            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: font]
-        }
         navigationItem.title = "Bác sĩ"
         navigationItem.leftBarButtonItem = customBackButton()
+        
         doctorAPI.url = "https://gist.githubusercontent.com/CanThaiLinh/c166341bf5c5a1f9f417656598013bc9/raw"
         doctorAPI.delegate = self
         doctorAPI.fetchData()
@@ -115,4 +113,5 @@ extension DoctorViewController {
         let customBarButtonItem = UIBarButtonItem(customView: button)
         return customBarButtonItem
     }
+    
 }
