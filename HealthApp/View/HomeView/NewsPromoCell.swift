@@ -31,11 +31,10 @@ class NewsPromoCell: UICollectionViewCell {
         layer.masksToBounds = false
         
         // Apply a shadow
-        layer.shadowRadius = 6.0
+        layer.shadowRadius = 8.0
         layer.shadowOpacity = 0.10
         layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOffset = CGSize(width: 0, height: 3)
-        
+        layer.shadowOffset = CGSize(width: 0, height: 4)
     }
     
     func configWithData(_ data: Decodable) {

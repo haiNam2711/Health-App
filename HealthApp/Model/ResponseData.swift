@@ -68,3 +68,10 @@ struct ArticleResponse: Decodable {
 struct ArticleItem: Decodable {
     let items: [Article]
 }
+
+struct UserResponse: Decodable {
+    let status: Int
+    let message: String
+    let code: Int
+    let data: User
+}

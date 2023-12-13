@@ -24,9 +24,7 @@ class DetailViewController: UIViewController {
         ProgressHUD.mediaSize = 30
         
         paragraph.navigationDelegate = self
-        if let font = GetFont.nunitoBold(18) {
-            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: font]
-        }
+        
         navigationItem.title = "Chi tiết tin tức"
         navigationItem.leftBarButtonItem = customBackButton()
         navigationItem.rightBarButtonItem = customShareButton()
